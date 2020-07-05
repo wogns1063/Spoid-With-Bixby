@@ -1,0 +1,31 @@
+structure (round2) {
+  description (2차전 결과를 담는 구조체)
+  property (HomeScore) {
+    type (homeScore)
+    min (Optional) max (One)
+  }
+  property (AwayScore) {
+    type (awayScore)
+    min (Optional) max (One)
+  }
+  property (MatchDate) {
+    type (matchDate)
+    min (Optional) max (One)
+  }
+  property (HomeShootOut) {
+    type (homeShootOut)
+    min (Optional) max (One)
+  }
+  property (AwayShootOut) {
+    type (awayShootOut)
+    min (Optional) max (One)
+  }
+  property (GameStatus) {
+    type (gameStatus)
+    min (Optional) max (Many)
+  }
+  property (MatchTime) {
+    type (matchTime)
+    min (Optional) max (Many)
+  }
+}

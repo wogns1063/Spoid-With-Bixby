@@ -1,0 +1,25 @@
+train (t-l77rd35ttgnygse1ths3vq9p5) {
+  utterance ("[g:jaehoon.epl.getLeagueRank] (18)[v:jaehoon.epl.seasonOneDepth:18] (19)[v:jaehoon.epl.seasonTwoDepth:19] 시즌 (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] 순위표 알려줘")
+  plan (Y2BlEMtKTM3Iz8/TSy3I0StKzMv2Ly0JKC1hkEQWT08t8UlNTC9NDQIqQNWSAxb3S8xNZZBCFi9OTSzOz/PPS3VJLSjJwCYXUp4PkWNhYGRgYmAG0gxAFgTCAJIcAA==)
+  last-modified (1591614195079)
+}
+train (t-l921pp86xuear02wqctgridkv) {
+  utterance ("[g:jaehoon.epl.getLeagueNameDateTimeExpression] (다음 주)[v:time.DateTimeExpression] (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] 경기 일정 알려주라")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPYxBDVpwDV8kgXZZZplcCVKuHRRMzAyMDE5BkANIgCAFwUQA=)
+  last-modified (1591245134128)
+}
+train (t-lf9225uk1liar3j9grzsotcbf) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (2020)[v:jaehoon.epl.fromYear:2020]년 (3)[v:jaehoon.epl.fromMonth:3]월 (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] 경기 알려줘")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBFlkorys/1zc8ryWAQQReOTE0sYhBDFs1BGMLCwMjAxMAMpBmALAiEASQ5AA==)
+  last-modified (1591199323633)
+}
+train (t-lmy252krs9vgix1t1wjfefpbr) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (2018)[v:jaehoon.epl.fromYear:2018]년 (8)[v:jaehoon.epl.fromMonth:8]월 (1)[v:jaehoon.epl.fromDay:1]일부터 (2019)[v:jaehoon.epl.toYear:2019]년 (3)[v:jaehoon.epl.toMonth:3]월 (1)[v:jaehoon.epl.toDay:1]일까지 (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] 경기 결과 보여줄래")
+  plan (Y+BkEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBGlkorys91SaxkEEUX9M3PK8lgEEEXjkxNLGIQQxbNQZgsiCxekg8yVxhVCGKqEKog2EwOBkYGJgZmBhYGVgY2BnYgnwEoggrRARY9AA==)
+  last-modified (1591199594785)
+}
+train (t-lmz1cphf7amvkwx64g5fryodq) {
+  utterance ("[g:getTeamNameSeason] (19)[v:seasonOneDepth] (20)[v:seasonTwoDepth] 시즌 (첼시)[v:soccerTeamName:첼시] 경기 알려줄래")
+  plan (Y2BlkMtKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLQlOTSzOz2OQRZZPTy0JSU3M9UvMTYVKSyFLF4PF/PNSXVILSjKwyYWU52OTy09OTi2CmczAwsDIwMTADKQZgCwIhAEkOQA=)
+  last-modified (1591242007254)
+}

@@ -1,0 +1,31 @@
+structure (awayTeam) {
+  description (__DESCRIPTION__)
+  property (TeamName) {
+    type (teamName)
+    min (Optional) max (One)
+  }
+  property (Score) {
+    type (score)
+    min (Optional) max (Many)
+  }
+  property (TeamRank) {
+    type (teamRank)
+    min (Optional) max (One)
+  }
+  property (WinDrawLose) {
+    type (winDrawLose)
+    min (Optional) max (One)
+  }
+  property (Bat) {
+    type (bat)
+    min (Optional) max (Many)
+  }
+  property (Pitcher) {
+    type (pitcher)
+    min (Optional) max (Many)
+  }
+  property (StatDetail) {
+    type (statDetail)
+    min (Optional) max (One)
+  }
+}

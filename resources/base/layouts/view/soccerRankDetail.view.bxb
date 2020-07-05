@@ -1,0 +1,258 @@
+result-view {
+  //  Action에 Output Name  (binding Name)
+  match: rankOutPut2 (rankOutPut2) {
+    from-output : getLeagueRank2
+    min (Required)
+    max (Many)
+  }
+  message{
+    template ("#{value(rankOutPut2[0].GameRound)} 대진표 입니다.")
+  }
+  
+  render {
+    layout{
+      section{
+        content{
+          for-each (rankOutPut2){
+            as (rankOutPut2){
+              divider
+              hbox{
+                content{
+                  vbox{
+                    grow(3)
+                    halign (Center)
+                    valign (Middle)
+                    content{
+                      single-line{
+                        image{
+                          url("[#{value(rankOutPut2.HomeTeamImageUrl)}]")
+                          shape (Circle)
+                          style(Title_XXL)
+                        }
+                      }
+                      single-line{
+                        text{
+                          value("[#{value(rankOutPut2.HomeTeamName)}]")
+                          style(Detail_L)
+                        }
+                      }
+                    }
+                  }
+                  vbox{
+                    halign (Center)
+                    valign (Middle)
+                    grow(1)
+                    content{
+                      single-line{
+                        text{
+                          value("[#{value(rankOutPut2.HomeTotalScore)}]")
+                          style(Title_XL)
+                        }
+                      }
+                      if(exists(rankOutPut2.HomeShootOut)){
+                        single-line{
+                          text{
+                            value("[#{value(rankOutPut2.HomeShootOut)}]")
+                            style(Detail_M_Soft)
+                          }
+                        }
+                      }
+                    }
+                  }
+                  vbox{
+                    grow(3)
+                    halign (Center)
+                    valign (Middle)
+                    content{
+                      if (rankOutPut2[0].GameRound == '결승'){
+                        if(!exists(rankOutPut2.Round1.HomeScore)){
+                          //결승전 경기가 아직 안했을경우
+                          single-line{
+                            text{
+                              value("결승전 [#{value(rankOutPut2.Round1.MatchDate)}] ([#{value(rankOutPut2.Round1.MatchTime)}])")
+                              style(Legal)
+                            }
+                          }
+                        }else{
+                          // 결승전 경기가 했을 경우
+                          single-line{
+                            text{
+                              value("[#{value(rankOutPut2.Round1.HomeScore)}]")
+                              style(Detail_M)
+                            }
+                            spacer
+                            text{
+                              value("결승전")
+                              style(Detail_M)
+                            }
+                            spacer
+                            text{
+                              value("[#{value(rankOutPut2.Round1.AwayScore)}]")
+                              style(Detail_M)                            
+                            }
+                          }
+                        }
+                      }else{
+                        //32, 16, 8, 4강
+                        if(!exists(rankOutPut2.Round1.HomeScore)){
+                          // 1차전 경기가 아직 안했을 경우
+                          single-line{
+                            text{
+                              value("1차전")
+                              style(Legal)
+                            }
+                          }  
+                          single-line{
+                            text{
+                              value("[#{value(rankOutPut2.Round1.MatchDate)}] ([#{value(rankOutPut2.Round1.MatchTime)}])")
+                              style(Legal)
+                            }
+                          }                        
+                        }else{
+                          // 1차전 경기를 했을 경우
+                          single-line{
+                            text{
+                              value("[#{value(rankOutPut2.Round1.HomeScore)}]")
+                              style(Detail_M)
+                            }
+                            spacer
+                            text{
+                              value("1차전")
+                              style(Detail_M)
+                            }
+                            spacer
+                            text{
+                              value("[#{value(rankOutPut2.Round1.AwayScore)}]")
+                              style(Detail_M)                            
+                            }
+                          }                          
+                        }
+                        if(!exists(rankOutPut2.Round2.HomeScore)){
+                          // 2차전 경기가 아직 안했을 경우
+                          single-line{
+                            text{
+                              value("2차전")
+                              style(Legal)
+                            }
+                          } 
+                          single-line{
+                            text{
+                              value("[#{value(rankOutPut2.Round2.MatchDate)}] ([#{value(rankOutPut2.Round2.MatchTime)}])")
+                              style(Legal)
+                            }
+                          }                         
+                        }else{
+                          // 2차전 경기를 했을 경우
+                          single-line{
+                            text{
+                              value("[#{value(rankOutPut2.Round2.HomeScore)}]")
+                              style(Detail_M)
+                            }
+                            spacer
+                            text{
+                              value("2차전")
+                              style(Detail_M)
+                            }
+                            spacer
+                            text{
+                              value("[#{value(rankOutPut2.Round2.AwayScore)}]")
+                              style(Detail_M)                            
+                            }
+                          }                          
+                        }
+                      }
+                    }
+                  }
+                  vbox{
+                    halign (Center)
+                    valign (Middle)
+                    grow(1)
+                    content{
+                      single-line{
+                        text{
+                          value("[#{value(rankOutPut2.AwayTotalScore)}]")
+                          style(Title_XL)
+                        }
+                      }
+                      if(exists(rankOutPut2.AwayShootOut)){
+                        single-line{
+                          text{
+                            value("[#{value(rankOutPut2.AwayShootOut)}]")
+                            style(Detail_M_Soft)
+                          }
+                        }
+                      }
+                    }
+                  }
+                  vbox{
+                    halign (Center)
+                    valign (Middle)
+                    grow(3)
+                    content{
+                      single-line{
+                        image{
+                          url("[#{value(rankOutPut2.AwayTeamImageUrl)}]")
+                          shape (Circle)
+                          style(Title_XXL)
+                        }
+                      }
+                      single-line{
+                        text{
+                          value("[#{value(rankOutPut2.AwayTeamName)}]")
+                          style(Detail_L)
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              divider
+            }
+          }
+        }
+      }
+    }
+  }
+  conversation-drivers{
+    if (rankOutPut2[0].EngLeagueName == 'uefacup'){
+      // 유로파리그는 32강 ~ 결승까지
+      conversation-driver{
+        template ("32강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("16강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("8강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("4강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("결승 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("선수 순위표 알려줘")
+      }
+    }else-if (rankOutPut2[0].EngLeagueName == 'uefacl'){
+      // 챔피언스리그는 16강 ~ 결승까지
+      conversation-driver{
+        template("16강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("8강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("4강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("결승 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("선수 순위표 알려줘")
+      }
+    }
+  }
+}
+
+

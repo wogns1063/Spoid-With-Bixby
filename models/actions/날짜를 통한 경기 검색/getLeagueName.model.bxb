@@ -1,0 +1,91 @@
+action (getLeagueName) {
+  type(Search)
+  description (해외 축구 경기 일정 정보를 가져옵니다. (날짜 검색))
+  collect {
+      input (LeagueName) {
+        type (leagueName)
+        min (Optional) max (One)
+      }
+      input (BaseballTeamName) {
+        type (baseballTeamName)
+        min (Optional) max (One)
+      }
+      input (FromYear) {
+        type (fromYear)
+        min (Optional) max (One)
+      }
+      input (FromMonth) {
+        type (fromMonth)
+        min (Optional) max (One)
+      }
+      input (FromDay) {
+        type (fromDay)
+        min (Optional) max (One)
+      }
+      input (ToYear) {
+        type (toYear)
+        min (Optional) max (One)
+      }
+      input (ToMonth) {
+        type (toMonth)
+        min (Optional) max (One)
+      }
+      input (ToDay) {
+        type (toDay)
+        min (Optional) max (One)
+      }
+      input (SoccerTeamName) {
+        type (soccerTeamName)
+        min (Optional) max (One)
+      }
+
+  }
+  output (outPut){
+    on-empty{
+      halt{
+        dialog{
+          template ("해당 기간 경기 일정이 없습니다.")
+        }
+      }
+    }
+    throws {
+      error (SearchFail) {
+        // When this error is caught, it will 'drop' the integer input, and attempt to run the function again.
+        on-catch {
+          // drop (integer) 
+          halt {
+            dialog("년도 혹은 달을 확인해주세요.")
+          }
+        }
+      }
+      error (LongTerm){
+        on-catch{
+          halt{
+            dialog("찾으시려는 경기 일정 간격을 1년 사이로 맞춰주세요.")
+          }
+        }
+      }
+      error (WrongTerm){
+        on-catch{
+          halt{
+            dialog("기간 설정이 잘못되었습니다.")
+          }
+        }
+      }
+      error (WrongLeagueName){
+        on-catch{
+          halt{
+            dialog("리그 이름을 다시 확인해주세요.")
+          }
+        }
+      }
+      error (notSupportYear){
+        on-catch{
+          halt{
+            dialog("2010년 이후의 경기 정보만 제공합니다.")
+          }
+        }
+      }
+    }
+  }
+}

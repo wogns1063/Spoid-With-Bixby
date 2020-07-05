@@ -1,0 +1,15 @@
+train (t-i76hxeniju01zzod4ykyd8swa) {
+  utterance ("[g:getLeagueNameSeason] (16)[v:seasonOneDepth] (17)[v:seasonTwoDepth] 시즌 (프리미어리그)[v:leagueName:프리미어리그] 경기 알려줘")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWGQRxZLTy3xSU1ML031S8xNDU5NLM7PYxBDVpADl2WQQhYvBqv1z0t1SS0oycAmF1KeD5FjYWBkYGJgBtIMQBYEwgCSHAA=)
+  last-modified (1591241385416)
+}
+train (t-imotfv7takonv4cmpa0oe7duz) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (18)[v:jaehoon.epl.fromYear:18]년 (3)[v:jaehoon.epl.fromMonth:3]월 (1)[v:jaehoon.epl.fromDay:1]일부터 (5)[v:jaehoon.epl.toMonth:5]월 (12)[v:jaehoon.epl.toDay:12]일까지 (디트로이트)[v:jaehoon.epl.baseballTeamName:디트로이트] 경기 일정 알려줘")
+  plan (ZYs7DsJADESHPy0ECqScIaegBERBQ+lIQyK0G6PgLbg9ARoneKp5z4Ml1ndhrdoUfIRCk52TYedZRTtQqsSTRCL3qpQnSwnhQolfm3l7azXu5YXtEB61sRqbIb5SWqw8Nf3ssz76rRcYYYwJpphh3jV03ad/f99v)
+  last-modified (1591288976512)
+}
+train (t-ium1v46vzo2lwabjkbq9jucwg) {
+  utterance ("[g:jaehoon.epl.getPitcherBatRank] (18)[v:jaehoon.epl.seasonOneDepth:18] 시즌 (메이저리그)[v:jaehoon.epl.leagueName:메이저리그] (투수)[v:jaehoon.epl.position:투수] 순위표 알려줘")
+  plan (Y2BlkMlKTM3Iz8/TSy3I0SvILEnOSC1ySizxLy0JKC1hkEWWTU8tCYArCErMy2YQQ5bOSU1ML031S8xNZRBBMTS/OLMkMz+PQQpZtDg1sTg/zz8v1SW1oCSDgYWBkYGJgRlIMwBZEAgDSHIA)
+  last-modified (1591296951875)
+}

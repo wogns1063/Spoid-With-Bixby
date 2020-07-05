@@ -1,0 +1,43 @@
+structure (pitcherBatOutPut) {
+  description (투수 타자 순위표를 가져옵니다.)
+  property (PlayerName) {
+    type (playerName)
+    min (Optional) max (One)
+  }
+  property (PlayerImg) {
+    type (playerImg)
+    min (Optional) max (One)
+  }
+  property (PlayerTeam) {
+    type (playerTeam)
+    min (Optional) max (One)
+  }
+  property (Stat) {
+    type (stat)
+    min (Optional) max (One)
+  }
+  property (Subject) {
+    type (subject)
+    min (Optional) max (One)
+  }
+  property (SubLeagueName) {
+    type (subLeagueName)
+    min (Optional) max (One)
+  }
+  property (TeamImageUrl) {
+    type (teamImageUrl)
+    min (Optional) max (One)
+  }
+  property (Dialog) {
+    type (dialog)
+    min (Required) max (One)
+  }
+  property (Rank) {
+    type (rank)
+    min (Required) max (One)
+  }
+  property (Category) {
+    type (category)
+    min (Required) max (One)
+  }
+}

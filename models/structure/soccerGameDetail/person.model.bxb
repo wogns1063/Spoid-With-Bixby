@@ -1,0 +1,27 @@
+structure (person) {
+  description (해당 팀 소속 선수)
+  property (BackNumber) {
+    type (backNumber)
+    min (Optional) max (One)
+  }
+  property (IsChanged) {
+    type (isChanged)
+    min (Required) max (One)
+  }
+  property (IsStarted) {
+    type (isStarted)
+    min (Optional) max (One)
+  }
+  property (LastName) {
+    type (lastName)
+    min (Optional) max (One)
+  }
+  property (PositionName) {
+    type (positionName)
+    min (Required) max (One)
+  }
+  property (CardType) {
+    type (cardType)
+    min (Optional) max (One)
+  }
+}

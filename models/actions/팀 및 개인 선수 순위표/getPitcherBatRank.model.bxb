@@ -1,0 +1,42 @@
+action (getPitcherBatRank) {
+  description (투수, 타자 및 축구 선수 순위표를 가져옵니다.)
+  type(Search)
+  collect {
+    input (LeagueName) {
+        type (leagueName)
+        min (Optional) max (One)
+    }
+    input (Position) {
+        type (position)
+        min (Optional) max (One)
+    }
+    input (SeasonOneDepth) {
+        type (seasonOneDepth)
+        min (Optional) max (One)
+    }
+    input (SeasonTwoDepth) {
+        type (seasonTwoDepth)
+        min (Optional) max (One)
+    }
+  }
+  output (pitcherBatOutPut){
+    throws{
+        error (soccerSeasonError) {
+        // When this error is caught, it will 'drop' the integer input, and attempt to run the function again.
+        on-catch {
+          // drop (integer) 
+          halt {
+            dialog("시즌 입력이 잘못되었습니다. 이렇게 말해보세요. 2018 2019 시즌 프리미어리그 선수 순위표 알려줘.")
+          }
+        }
+      }
+      error (noSupportCup){
+        on-catch{
+          halt{
+            dialog("FA 컵, EFL 컵은 리그가 아니여서 선수 순위표가 없습니다.")
+          }
+        }
+      }
+    }
+  }
+}

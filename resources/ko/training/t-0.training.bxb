@@ -1,0 +1,25 @@
+train (t-00arux410lqc0wxqjqr9xd7kt) {
+  utterance ("[g:getTeamName] (8)[v:fromMonth:8]월부터 (3)[v:toMonth:3]월까지 (스팔 2013)[v:soccerTeamName:'스팔 2013'] 경기 결과 보고싶다")
+  plan (Y2BlkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgkEIWLs5PTk4tgmsRRpYryYdoYGFgZGBiYAbSDEAWBMIAkhwA)
+  last-modified (1591246542907)
+}
+train (t-016y5hojlnpo1e9mqb9o6htat) {
+  utterance ("[g:getTeamName] (3)[v:fromMonth:3]월 (1)[v:fromDay:1]일 (레알 바야돌리드)[v:soccerTeamName:'레알 바야돌리드'] 경기 보여줘")
+  plan (Y2BlkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRpZIK8rPdUmsZBBFF/TNzyvJYJBCFi7OT05OLYKbw8LAyMDEwAykGYAsCIQBJDkA)
+  last-modified (1591246546308)
+}
+train (t-0b02kuxsoaxj3ied5lhbcoht9) {
+  utterance ("[g:getLeagueNameDateTimeExpression] (이번 주 주말)[v:time.DateTimeExpression] (프리미어리그)[v:leagueName:프리미어리그] 경기 알려줘")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPYxBDVpwDV8kgXZZZplcCVKuHRRMzAyMDE5BkANIgCAFwUQA=)
+  last-modified (1592499764589)
+}
+train (t-0fir4qtui8l8216xfg7tlcd77) {
+  utterance ("[g:getTeamNameDateTimeExpression] (내일)[v:time.DateTimeExpression] (뒤셀도르프)[v:soccerTeamName:뒤셀도르프] 경기 일정 알려줄래")
+  plan (Y2Bl0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRiy0hywsSCVDFLI4sX5ycmpRTBTGKTLMsv0SoDm6GExkIWBkYGJgRlIMwBZEAgDzEA2WAYA)
+  last-modified (1591247258859)
+}
+train (t-0oc1ryfws4ctgakqzw7xzx4m3) {
+  utterance ("[g:getLeagueName] (18)[v:fromYear:18]년 (8)[v:fromMonth:8]월 (2)[v:fromDay:2]일부터 (11)[v:toMonth:11]월 (3)[v:toDay:3]일까지 (챔스)[v:leagueName:챔피언스리그] 경기 결과 알려줘")
+  plan (Y+BgEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBGlkorys91SaxkEEUX9M3PK8lgEEEXjkxNLGIQQxbNQZgsiCxekg8yVxhVCGIqOwMjAxMDMwMLAysDG5DHAOQjQ1SAoRoA)
+  last-modified (1591246548632)
+}

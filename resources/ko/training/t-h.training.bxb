@@ -1,0 +1,20 @@
+train (t-h0uruz3zmxb2yf4o9mogrdna6) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (19)[v:jaehoon.epl.fromYear:19]년 (5)[v:jaehoon.epl.fromMonth:5]월 (일본야구)[v:jaehoon.epl.leagueName:일본프로야구] (야쿠르트)[v:baseballTeamName:야쿠르트] 경기 알려줘")
+  plan (Y2BjEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZZBBlkpKLE5NSszJCUlNzAXLiiLLphXl5/rm55VkMIigC0emJhYxiCGL5iCsYGVgZGBiYGZgAbIYgGwYRAAUFQA=)
+  last-modified (1591290922208)
+}
+train (t-hg5qvkztopm728p3nqdidj8j3) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (17)[v:jaehoon.epl.fromYear:17]년 (메이저리그)[v:leagueName:메이저리그] (미네소타)[v:baseballTeamName:미네소타] 경기 일정 보여줘")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZZBBlkpKLE5NSszJCUlNzAXLiiDLphXl50amJhYxiCGL5iDMYmFgZGBiYAbSDEAWBMIAkhwA)
+  last-modified (1591289385394)
+}
+train (t-hjurjy9xznsp4to5nznpu9518) {
+  utterance ("[g:getLeagueNameSeason] (18)[v:seasonOneDepth] (19)[v:seasonTwoDepth] 시즌 (프리미어리그)[v:leagueName:프리미어리그] (토트넘)[v:soccerTeamName:토트넘] 경기 알려줘")
+  plan (Y2BjEMpKTM3Iz8/TSy3I0csvLQkoLWGQRxZLTy3xSU1ML031S8xNDU5NLM7PYxBDVpADl2WQQhYvBqv1z0t1SS0oycAmF1Kej00uPzk5tSgkNTEXbCYrAyMDEwMzAwuQxQBkwyACoKgAAA==)
+  last-modified (1591241571726)
+}
+train (t-hqsy29dwpnssndw3xl29nnf5x) {
+  utterance ("[g:jaehoon.epl.getTeamNameDateTimeExpression] (내일)[v:viv.time.DateTimeExpression] (토트넘)[v:jaehoon.epl.soccerTeamName:토트넘] 경기 보고싶어라")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591295688584)
+}

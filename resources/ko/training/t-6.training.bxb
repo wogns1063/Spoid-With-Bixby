@@ -1,0 +1,20 @@
+train (t-6cu2brqol1c36qox6tgcjfdw6) {
+  utterance ("[g:getLeagueName] (12)[v:fromDay:12]일 (일본야구)[v:leagueName:일본프로야구] (주니치)[v:baseballTeamName:주니치] 경기 일정 보여주라")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZZBBlkpKLE5NSszJCUlNzAXLCiPLphXl57okVjKIIQvmIIxiYWBkYGJgBtIMQBYEwgCSHAA=)
+  last-modified (1591289496673)
+}
+train (t-6d96wrpzkiypepggx4spjc61m) {
+  utterance ("[g:getLeagueRank2] (18)[v:seasonOneDepth:18] (19)[v:seasonTwoDepth:19] 시즌 (챔피언스리그)[v:leagueName:챔피언스리그] (결승)[v:round:결승] 대진표 알려줘")
+  plan (Y2BjEM9KTM3Iz8/TSy3I0StKzMv2Ly0JKC0xYpBClkhPLfFJTUwvTQ0CqjBiEEOWywFL+CXmpjIIohiWX5qXgmpMcWpicX6ef16qS2pBSQY2uZDyfIgcKwMjAxMDMwMLkMUAZMMgAqCoAAA=)
+  last-modified (1591251662144)
+}
+train (t-6mibvju1ud5ysh33jhrk2hhkh) {
+  utterance ("[g:jaehoon.epl.getTeamName] (빌럼 II)[v:jaehoon.epl.soccerTeamName:'빌럼 II'] 경기 보여줘")
+  plan (Y2BmkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWWQQpYozk9OTi2CyzExMAIxA5BkZAABKB8A)
+  last-modified (1591203387293)
+}
+train (t-6tfmu8u1fyrflkae7q9rpajn2) {
+  utterance ("[g:jaehoon.epl.getTeamName] (19)[v:jaehoon.epl.fromYear:19]년 (3)[v:jaehoon.epl.fromMonth:3]월부터 (9)[v:jaehoon.epl.toMonth:9]월까지 (오사 수나)[v:jaehoon.epl.soccerTeamName:오사수나] 경기 결과 알려줘")
+  plan (Y2BjkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgEEEXjkxNLGKQQhYtzk9OTi2CGySMLFeSDzGGlYGRgYmBmYEFyGIAsmEQAVBUAAA=)
+  last-modified (1591604490167)
+}

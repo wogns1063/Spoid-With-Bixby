@@ -1,0 +1,15 @@
+train (t-raglmuini6bwwpxm3n4e9r253) {
+  utterance ("[g:jaehoon.epl.getTeamNameDateTimeExpression] (내일)[v:viv.time.DateTimeExpression] (번리)[v:jaehoon.epl.soccerTeamName:번리] 경기 일정 보여줘")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591247682065)
+}
+train (t-raw6l7nbn8vk9j297duly2rr2) {
+  utterance ("[g:jaehoon.epl.getTeamName] (1)[v:jaehoon.epl.fromMonth:1]월 (오사수나)[v:soccerTeamName:오사수나] 경기 일정 보여줘")
+  plan (Y2BhkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgkEIWLs5PTk4tgmthZmBkYAKSDEAaBCEALgoA)
+  last-modified (1591604431814)
+}
+train (t-rwjwg2565zs0xs9eci9ylzv86) {
+  utterance ("[g:jaehoon.epl.getLeagueRank2] (10)[v:jaehoon.epl.seasonOneDepth:10] (11)[v:jaehoon.epl.seasonTwoDepth:11] 시즌 (챔스)[v:jaehoon.epl.leagueName:챔피언스리그] (결승)[v:jaehoon.epl.round:결승] 대진표 알려줘")
+  plan (Y2BjEM9KTM3Iz8/TSy3I0StKzMv2Ly0JKC0xYpBClkhPLfFJTUwvTQ0CqjBiEEOWywFL+CXmpjIIohiWX5qXgmpMcWpicX6ef16qS2pBSQY2uZDyfIgcKwMjAxMDMwMLkMUAZMMgAqCoAAA=)
+  last-modified (1592287309277)
+}

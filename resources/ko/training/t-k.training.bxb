@@ -1,0 +1,30 @@
+train (t-k2jj856dokehlqlp5fpfgin8h) {
+  utterance ("[g:getPitcherBatRank] (18)[v:seasonOneDepth:18] (19)[v:seasonTwoDepth:19] 시즌 (에레디비 시)[v:leagueName:에레디비시] (선수)[v:position:선수] 순위표 알려줘")
+  plan (Y2BjkMlKTM3Iz8/TSy3I0SvILEnOSC1ySizxLy0JKC1hkEWWTU8tCYArCErMy2YQQ5bOSU1ML031S8xNZRBBMTS/OLMkMz+PQQpZtDg1sTg/zz8v1SW1oCQDm1xIeT5EjpWBkYGJgZmBBchiALJhEAFQVAAA)
+  last-modified (1591260975674)
+}
+train (t-k2vjsesxn98yxkwdynkc1dbci) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (2019)[v:jaehoon.epl.fromYear:2019]년 (8)[v:jaehoon.epl.fromMonth:8]월 (1)[v:jaehoon.epl.fromDay:1]일부터 (2020)[v:toYear]년 (3)[v:toMonth]월까지 (라리가)[v:jaehoon.epl.leagueName:라리가] 경기 일정 보여줄래")
+  plan (Y+BgEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBGlkorys91SaxkEEUX9M3PK8lgEEEXjkxNLGIQQxbNwWFyST7ECCFUQbAB7AyMDEwMzAwsDKwMbEAeA5CPDFEBhmoA)
+  last-modified (1591199447113)
+}
+train (t-k52mx9cd9fbr05dp8386n0zgv) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (18)[v:jaehoon.epl.fromYear:18]년 (3)[v:jaehoon.epl.fromMonth:3]월부터 (11)[v:jaehoon.epl.toMonth:11]월까지 (시애틀)[v:baseballTeamName:시애틀] 경기 알려줄래")
+  plan (Y2BjEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZZBBlkpKLE5NSszJCUlNzAXLiiLLphXl5/rm55VkMIigC0emJhYxCCOLluRDlLIyMDIwMTAzsABZDEA2DCIAigoA)
+  last-modified (1591288902543)
+}
+train (t-k5na0n5dczcfy6als4zvvdhab) {
+  utterance ("[g:getLeagueName] (19)[v:fromYear]년 (3)[v:fromMonth]월 (프리미어리그)[v:leagueName:프리미어리그] 경기 알려줘")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBFlkorys/1zc8ryWAQQReOTE0sYhBDFs1BGMLCwMjAxMAMpBmALAiEASQ5AA==)
+  last-modified (1591066311545)
+}
+train (t-kkx4d7lq0uxwbdl3tvdxmn1c8) {
+  utterance ("[g:getTeamName] (2019)[v:fromYear:2019]년 (8)[v:fromMonth:8]월 (1)[v:fromDay:1]일부터 (2020)[v:toYear:2020]년 (3)[v:toMonth:3]월까지 (AT 마드리드)[v:soccerTeamName:'AT 마드리드'] 경기 결과 보여줘")
+  plan (Y+BgkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRpZIK8rPdUmsZBBFF/TNzyvJYBBBF45MTSxikEIWLc5PTk4twm56ST7EGCFUQbAh7AyMDEwMzAwsDKwMbEAeA5CPDFEBhmoA)
+  last-modified (1591202197225)
+}
+train (t-krlrehpuxsnsf0285nq3vvewq) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (8)[v:jaehoon.epl.fromMonth:8]월부터 (3)[v:jaehoon.epl.toMonth:3]월 (1)[v:jaehoon.epl.toDay:1]일까지 (MLB)[v:jaehoon.epl.leagueName:메이저리그] 경기 일정 알려주삼")
+  plan (Y2BjEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBFlkorys/1zc8ryWAQQxbOQSgXRBYvyXdJrGQQRhWC6GdlYGRgYmBmYAGyGIBsGEQAFBUA)
+  last-modified (1591200025438)
+}

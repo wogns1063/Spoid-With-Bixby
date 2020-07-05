@@ -1,0 +1,3 @@
+text (isStarted) {
+  description (선발인지 후보인지)
+}

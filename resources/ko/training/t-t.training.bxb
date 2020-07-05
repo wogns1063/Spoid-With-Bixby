@@ -1,0 +1,15 @@
+train (t-t9wruby4b167xlux0tq41w3sx) {
+  utterance ("[g:getTeamNameSeason] (18)[v:seasonOneDepth:18] (19)[v:seasonTwoDepth:19] 시즌 (토트넘)[v:soccerTeamName:토트넘] 경기 알려주세요")
+  plan (Y2BlkMtKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLQlOTSzOz2OQRZZPTy0JSU3M9UvMTYVKSyFLF4PF/PNSXVILSjKwyYWU52OTy09OTi2CmczAwsDIwMTADKQZgCwIhAEkOQA=)
+  last-modified (1591242077025)
+}
+train (t-tblf040q8uqzkbhf0cstbqfah) {
+  utterance ("[g:getTeamNameDateTimeExpression] (내일)[v:time.DateTimeExpression] (샬케 04)[v:jaehoon.epl.soccerTeamName:'샬케 04'] 경기 보여줘")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591247593065)
+}
+train (t-tftrdwi6fyiv6w9h3xdyjvm3j) {
+  utterance ("[g:jaehoon.epl.getLeagueNameDateTimeExpression] (내일)[v:time.DateTimeExpression] (마인츠)[v:soccerTeamName:마인츠] (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] 경기 알려줘")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPYxBDVpwDV8kghSxenJ+cnFoUkpqYC5aTLsss0ysBmqOHxUAWBkYGJgZmIM0AZEEgDCDJAQA=)
+  last-modified (1591247068945)
+}

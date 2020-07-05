@@ -1,0 +1,3 @@
+text (times) {
+  description (연속 몇번 승, 패했는지)
+}

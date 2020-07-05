@@ -1,0 +1,20 @@
+train (t-ze6125kgxrd3jdrkmdhe7gm6s) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (8)[v:jaehoon.epl.fromMonth:8]월부터 (3)[v:jaehoon.epl.toMonth:3]월까지 (메이저리그)[v:jaehoon.epl.leagueName:메이저리그] 경기 일정 알려줘")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBFlkorys/1zc8ryWAQQxbOQSgXRhYvyYcoZmFgZGBiYAbSDEAWBMIAkhwA)
+  last-modified (1591199822070)
+}
+train (t-zpfnj9jnia0ofo7gebk1ej3hh) {
+  utterance ("[g:getTeamName] (19)[v:fromYear]년 (3)[v:fromMonth]월 (토트넘)[v:soccerTeamName:토트넘] 경기 알려줘")
+  plan (Y2BlkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgEEEXjkxNLGKQQhYtzk9OTi2CG8TCwMjAxMAMpBmALAiEASQ5AA==)
+  last-modified (1591195061054)
+}
+train (t-zvh77tmwv8qr9n1ifks50e1x4) {
+  utterance ("[g:jaehoon.epl.getTeamNameSeason] (2014)[v:jaehoon.epl.seasonOneDepth:2014] (2015)[v:jaehoon.epl.seasonTwoDepth:2015] 시즌 (리옹)[v:jaehoon.epl.soccerTeamName:리옹] 경기 보여줄래")
+  plan (Y2BlkMtKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLQlOTSzOz2OQRZZPTy0JSU3M9UvMTYVKSyFLF4PF/PNSXVILSjKwyYWU52OTy09OTi2CmczAwsDIwMTADKQZgCwIhAEkOQA=)
+  last-modified (1591242162780)
+}
+train (t-zwjkcn7i4l0vd0gqw8dvsnbap) {
+  utterance ("[g:jaehoon.epl.getLeagueRank] (14)[v:jaehoon.epl.seasonOneDepth:14] (15)[v:jaehoon.epl.seasonTwoDepth:15] 시즌 (챔피언스리그)[v:jaehoon.epl.leagueName:챔피언스리그] 대진표 알려줘")
+  plan (Y2BlEMtKTM3Iz8/TSy3I0StKzMv2Ly0JKC1hkEQWT08t8UlNTC9NDQIqQNWSAxb3S8xNZZBCFi9OTSzOz/PPS3VJLSjJwCYXUp4PkWNhYGRgYmAG0gxAFgTCAJIcAA==)
+  last-modified (1592286731621)
+}

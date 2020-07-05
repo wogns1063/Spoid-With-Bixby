@@ -1,0 +1,39 @@
+structure (teamStat) {
+  description (해당 팀 스택)
+  property (Chg) {
+    type (chg)
+    min (Optional) max (One)
+  }
+  property (Ck) {
+    type (ck)
+    min (Optional) max (One)
+  }
+  property (Fo) {
+    type (fo)
+    min (Optional) max (One)
+  }
+  property (Off) {
+    type (off)
+    min (Optional) max (One)
+  }
+  property (Possession) {
+    type (possession)
+    min (Optional) max (One)
+  }
+  property (Red) {
+    type (red)
+    min (Optional) max (One)
+  }
+  property (Sht) {
+    type (sht)
+    min (Optional) max (One)
+  }
+  property (Sog) {
+    type (sog)
+    min (Optional) max (One)
+  }
+  property (Yel) {
+    type (yel)
+    min (Optional) max (One)
+  }
+}

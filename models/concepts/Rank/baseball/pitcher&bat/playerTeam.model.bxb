@@ -1,0 +1,3 @@
+text (playerTeam) {
+  description (해당 선수 소속팀)
+}

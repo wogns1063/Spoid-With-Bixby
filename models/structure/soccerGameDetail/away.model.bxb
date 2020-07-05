@@ -1,0 +1,19 @@
+structure (away) {
+  description (awayTeam 경기 정보 내용)
+  property (TeamName) {
+    type (teamName)
+    min (Optional) max (One)
+  }
+  property (Formation) {
+    type (formation)
+    min (Optional) max (One)
+  }
+  property (Person) {
+    type (person)
+    min (Optional) max (Many)
+  }
+  property (TeamStat) {
+    type (teamStat)
+    min (Optional) max (One)
+  }
+}

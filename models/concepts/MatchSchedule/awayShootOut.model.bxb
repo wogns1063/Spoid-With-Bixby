@@ -1,0 +1,3 @@
+text (awayShootOut) {
+  description (awayTeam 승부차기 점수)
+}

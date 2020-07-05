@@ -1,0 +1,3 @@
+text (isChanged) {
+  description (교체되었는지 안되었는지 true = 교체 / false = 교체X)
+}

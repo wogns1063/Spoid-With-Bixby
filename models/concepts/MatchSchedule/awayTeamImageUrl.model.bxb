@@ -1,0 +1,3 @@
+text (awayTeamImageUrl) {
+  description (awayTeam)
+}

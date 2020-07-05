@@ -1,0 +1,297 @@
+result-view {
+  //  Action에 Output Name  (binding Name)
+  match: outPut (outPut) {
+    from-output : getLeagueNameDateTimeExpression
+    min (Required)
+    max (Many)
+  }
+  
+  message("#{value(outPut[0].Answer)}")
+
+
+  render {
+    layout{
+      section{
+        content{
+          if(exists(outPut[0].Check3)){
+            // 야구
+            for-each (outPut){
+              as (outPut){
+                compound-card{
+                  content{
+                    single-line{
+                      text{
+                        value("[#{value(outPut.MatchDate)}] [#{value(outPut.MatchTime)}]")
+                        style(Detail_M)
+                      }
+                      spacer
+                      if(exists(outPut.GameRound)){
+                          text{
+                            value("<[#{value(outPut.GameRound)}]>")
+                            style(Detail_M)  
+                          }
+                      }
+                    }
+                    divider
+                    hbox{
+                      content{
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            single-line{
+                              image{
+                                url("[#{value(outPut.AwayTeamImageUrl)}]")
+                                shape (Circle)
+                                style(Title_XXL)
+                              }
+                            }
+                            single-line{
+                              text{
+                                value("[#{value(outPut.AwayTeamName)}]")
+                                style(Detail_L)
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(2)
+                          halign (Center)
+                          content{
+                            single-line{
+                              text{
+                                value("[#{value(outPut.AwayScore)}]")
+                                style(Title_XL)
+                              }
+                              spacer
+                              text{
+                                value(" : ")
+                                style(Title_XL)
+                              }
+                              spacer
+                              text{
+                                value("[#{value(outPut.HomeScore)}]")
+                                style(Title_XL)
+                              }
+                            }
+                            if (exists(outPut.Check)){
+                              single-line{
+                                text{
+                                  value("[#{value(outPut.GameStatus)}]")
+                                  style(Detail_M)
+                                }
+                              }
+                            }else{
+                              single-line{
+                                text{
+                                  value("[#{value(outPut.GameStatus)}]")
+                                  style(Legal)
+                                }
+                              }
+                            }
+
+                            single-line{
+                              text{
+                                value("[#{value(outPut.FieldName)}]")
+                                style(Legal)
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            single-line{
+                              image{
+                                url("[#{value(outPut.HomeTeamImageUrl)}]")
+                                shape (Circle)
+                                style(Title_XXL)
+                              }
+                            }
+                            single-line{
+                              text{
+                                value("[#{value(outPut.HomeTeamName)}]")
+                                style(Detail_L)
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  on-click{
+                    if (exists(outPut.Check)){
+                      if (exists(outPut.Check2)){
+                        // 축구
+                        intent{
+                          goal : getSoccerGameDetail
+                          value : $expr(outPut.GameId)
+                          value : $expr(outPut.Category)
+                        }
+                      }else {
+                        // 야구
+                        intent{
+                          goal : getBaseBallDetail
+                          value : $expr(outPut.GameId)
+                          value : $expr(outPut.Category)
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }            
+          }else{
+            //축구
+            for-each (outPut){
+              as (outPut){
+                compound-card{
+                  content{
+                    single-line{
+                      text{
+                        value("[#{value(outPut.MatchDate)}] [#{value(outPut.MatchTime)}]")
+                        style(Detail_M)
+                      }
+                      spacer
+                      if(exists(outPut.GameRound)){
+                          text{
+                            value("<[#{value(outPut.GameRound)}]>")
+                            style(Detail_M)  
+                          }
+                      }
+                    }
+                    divider
+                    hbox{
+                      content{
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            single-line{
+                              image{
+                                url("[#{value(outPut.HomeTeamImageUrl)}]")
+                                shape (Circle)
+                                style(Title_XXL)
+                              }
+                            }
+                            single-line{
+                              text{
+                                value("[#{value(outPut.HomeTeamName)}]")
+                                style(Detail_L)
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(2)
+                          halign (Center)
+                          content{
+                              single-line{
+                                text{
+                                  value("[#{value(outPut.HomeScore)}]")
+                                  style(Title_XL)
+                                }
+                                spacer
+                                text{
+                                  value(" : ")
+                                  style(Title_XL)
+                                }
+                                spacer
+                                text{
+                                  value("[#{value(outPut.AwayScore)}]")
+                                  style(Title_XL)
+                                }
+                              }
+                            if(exists(outPut.HomeShootOut)){
+                              single-line{
+                                text{
+                                  value("[#{value(outPut.HomeShootOut)}] ")
+                                  style(Detail_M)
+                                }
+                                spacer
+                                text{
+                                  value(" 승부차기 ")
+                                  style(Detail_M)
+                                }
+                                spacer
+                                text{
+                                  value(" [#{value(outPut.AwayShootOut)}]")
+                                  style(Detail_M)
+                                }
+                              } 
+                            }
+                            if (exists(outPut.Check)){
+                              single-line{
+                                text{
+                                  value("[#{value(outPut.GameStatus)}]")
+                                  style(Detail_M)
+                                }
+                              }
+                            }else{
+                              single-line{
+                                text{
+                                  value("[#{value(outPut.GameStatus)}]")
+                                  style(Legal)
+                                }
+                              }
+                            }
+
+                            single-line{
+                              text{
+                                value("[#{value(outPut.FieldName)}]")
+                                style(Legal)
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            single-line{
+                              image{
+                                url("[#{value(outPut.AwayTeamImageUrl)}]")
+                                shape (Circle)
+                                style(Title_XXL)
+                              }
+                            }
+                            single-line{
+                              text{
+                                value("[#{value(outPut.AwayTeamName)}]")
+                                style(Detail_L)
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  on-click{
+                    if (exists(outPut.Check)){
+                      if (exists(outPut.Check2)){
+                        // 축구
+                        intent{
+                          goal : getSoccerGameDetail
+                          value : $expr(outPut.GameId)
+                          value : $expr(outPut.Category)
+                        }
+                      }else {
+                        // 야구
+                        intent{
+                          goal : getBaseBallDetail
+                          value : $expr(outPut.GameId)
+                          value : $expr(outPut.Category)
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+}

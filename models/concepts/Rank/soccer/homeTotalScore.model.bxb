@@ -1,0 +1,3 @@
+text (homeTotalScore) {
+  description (1차전, 2차전 총 스코어)
+}

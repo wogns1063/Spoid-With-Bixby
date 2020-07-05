@@ -1,0 +1,15 @@
+train (t-743ls6uacm4kc9ugapgfiriom) {
+  utterance ("[g:getTeamNameDateTimeExpression] (이번주)[v:viv.time.DateTimeExpression] (볼프스부르크)[v:soccerTeamName:볼프스부르크] 경기 일정 보여주겠니")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591248554219)
+}
+train (t-7nzgatirnk5a53v2f68dpscy3) {
+  utterance ("[g:jaehoon.epl.getTeamName] (18)[v:jaehoon.epl.fromYear:18]년 (8)[v:jaehoon.epl.fromMonth:8]월부터 (11)[v:jaehoon.epl.toMonth:11]월 (3)[v:jaehoon.epl.toDay:3]일까지 (포르투나 시타르트)[v:jaehoon.epl.soccerTeamName:'포르투나 시타르트'] 경기 일정 보여줄래")
+  plan (Y2BnkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgEEEXjkxNLGKQQhYtzk9OTi2CGySILFeS75JYySCMKgQxmY2BkYGJgZmBhYEVyGYA8hAQGaCpAwA=)
+  last-modified (1591203132974)
+}
+train (t-7qr6m4lamvrok64qcfqhto1xv) {
+  utterance ("[g:jaehoon.epl.getTeamName] (2020)[v:jaehoon.epl.fromYear:2020]년 (3)[v:jaehoon.epl.fromMonth:3]월 (RB 라이프치히)[v:soccerTeamName:'RB 라이프치히'] 경기 알려줘")
+  plan (Y2BlkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgEEEXjkxNLGKQQhYtzk9OTi2CG8TCwMjAxMAMpBmALAiEASQ5AA==)
+  last-modified (1591202037619)
+}

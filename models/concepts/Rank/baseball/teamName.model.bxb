@@ -1,0 +1,3 @@
+text (teamName) {
+  description (팀 이름을 가져옵니다.)
+}

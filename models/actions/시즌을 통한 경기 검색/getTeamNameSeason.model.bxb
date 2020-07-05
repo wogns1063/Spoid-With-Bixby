@@ -1,0 +1,89 @@
+action (getTeamNameSeason) {
+  type(Search)
+  description (__DESCRIPTION__)
+  collect {
+    input (SeasonOneDepth) {
+      type (seasonOneDepth)
+      min (Optional) max (One)
+    }
+    input (SeasonTwoDepth) {
+      type (seasonTwoDepth)
+      min (Optional) max (One)
+    }
+    input (LeagueName) {
+      type (leagueName)
+      min (Optional) max (One)
+    }
+    input (SoccerTeamName) {
+      type (soccerTeamName)
+      min (Optional) max (One)
+    }
+  }
+  output (LeagueOutPutSeason){
+  on-empty{
+      halt{
+        dialog{
+          template ("해당 기간 경기 일정이 없습니다.")
+        }
+      }
+    }
+    throws{
+      error (LongTerm){
+        on-catch{
+          halt{
+            dialog("한 시즌씩 검색할 수 있습니다. 다시 설정해 주세요.")
+          }
+        }
+      }
+      error (WrongTerm){
+        on-catch{
+          halt{
+            dialog("기간 설정이 잘못되었습니다.")
+          }
+        }
+      }
+      error (WrongLeagueName){
+        on-catch{
+          halt{
+            dialog("리그 이름을 다시 확인해주세요.")
+          }
+        }
+      }
+      error (WrongYear){
+        on-catch{
+          halt{
+            dialog("년도를 다시 확인해주세요.")
+          }
+        }
+      }
+      error (notSupportBaseball){
+        on-catch{
+          halt{
+            dialog("순위표는 축구 리그만 제공됩니다.")
+          }
+        }
+      }
+      error (soccerSeasonError){
+        on-catch{
+          halt{
+            dialog("시즌 입력이 잘못되었습니다. 이렇게 말해보세요. 2018 2019 시즌 프리미어리그 순위표 알려줘.")
+          }
+        }
+      }
+      error (BaseBallSeasonError){
+        on-catch{
+          halt{
+            dialog("시즌 입력이 잘못되었습니다. 이렇게 말해보세요. 2018 시즌 메이저리그 순위표 알려줘.")
+          }
+        }
+      }      
+      error (notSupportYear){
+        on-catch{
+          halt{
+            dialog("2010년 이후의 경기 정보만 제공합니다.")
+          }
+        }
+      }
+    }
+  }
+}

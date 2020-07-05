@@ -1,0 +1,3 @@
+text (scoredPlayerName) {
+  description (득점한 선수 이름)
+}

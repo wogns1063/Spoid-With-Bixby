@@ -1,0 +1,10 @@
+train (t-3dyc5smtprzvyyzb0l1wntj54) {
+  utterance ("[g:jaehoon.epl.getTeamNameDateTimeExpression] (다음 주)[v:viv.time.DateTimeExpression] (일)[v:soccerTeamName:릴] 경기 일정 보여줘")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591607019673)
+}
+train (t-3lvgxuinw9uuviiverq3o5x8q) {
+  utterance ("[g:jaehoon.epl.getTeamName] (19)[v:jaehoon.epl.fromYear:19]년 (9)[v:jaehoon.epl.fromMonth:9]월 (12)[v:jaehoon.epl.fromDay:12]일부터 (2)[v:jaehoon.epl.toMonth:2]월까지 (삼프도리아)[v:jaehoon.epl.soccerTeamName:삼프도리아] 경기 알려줘")
+  plan (Y2BnkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRpZIK8rPdUmsZBBFF/TNzyvJYBBBF45MTSxikEIWLc5PTk4twm56ST7EGDYGRgYmBmYGFgZWIJsByENAZICmDgA=)
+  last-modified (1591604613809)
+}

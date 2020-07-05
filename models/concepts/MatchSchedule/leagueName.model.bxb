@@ -1,0 +1,14 @@
+enum (leagueName) {
+  symbol (프리미어리그)
+  symbol (라리가)
+  symbol (분데스리가)
+  symbol (세리에 A)
+  symbol (리그 원)
+  symbol (에레디비시)
+  symbol (챔피언스리그)
+  symbol (유로파리그)
+  symbol (EFL 컵)
+  symbol (FA 컵)
+  symbol (메이저리그)
+  symbol (일본프로야구)
+}

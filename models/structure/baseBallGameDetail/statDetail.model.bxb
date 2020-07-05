@@ -1,0 +1,39 @@
+structure (statDetail) {
+  description (__DESCRIPTION__)
+  property (BatH) {
+    type (batH)
+    min (Optional) max (One)
+  }
+  property (BatHr) {
+    type (batHr)
+    min (Optional) max (One)
+  }
+  property (BatAvg) {
+    type (batAvg)
+    min (Optional) max (One)
+  }
+  property (PitSo) {
+    type (pitSo)
+    min (Optional) max (One)
+  }
+  property (BatSb) {
+    type (batSb)
+    min (Optional) max (One)
+  }
+  property (FldErr) {
+    type (fldErr)
+    min (Optional) max (One)
+  }
+  property (BatGdp) {
+    type (batGdp)
+    min (Optional) max (One)
+  }
+  property (BatLob) {
+    type (batLob)
+    min (Optional) max (One)
+  }
+  property (BatBbhp) {
+    type (batBbhp)
+    min (Optional) max (One)
+  }
+}

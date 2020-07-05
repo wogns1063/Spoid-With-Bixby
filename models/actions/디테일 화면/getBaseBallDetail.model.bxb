@@ -1,0 +1,23 @@
+action (getBaseBallDetail) {
+  type(Search)
+  description (야구 경기 세부정보를 가져오는 Action)
+  collect {
+    input (GameId) {
+      type (gameId)
+      min (Optional) max (One)
+    }
+    input (Category) {
+        type (category)
+        min (Optional) max (One)
+    }
+  }
+  output (baseBallGameDetail){
+    on-empty{
+      halt{
+        dialog{
+          template ("경기 정보가 없습니다.")
+        }
+      }
+    }
+  }
+}

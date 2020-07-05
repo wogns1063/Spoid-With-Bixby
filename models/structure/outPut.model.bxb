@@ -1,0 +1,91 @@
+structure (outPut) {
+  description (화면에 보여줄 결과값들)
+  property (HomeTeamName) {
+    type (homeTeamName)
+    min (Optional) max (Many)
+  }
+  property (AwayTeamName) {
+    type (awayTeamName)
+    min (Optional) max (Many)
+  }
+  property (AwayScore) {
+    type (awayScore)
+    min (Optional) max (Many)
+  }
+  property (HomeScore) {
+    type (homeScore)
+    min (Optional) max (Many)
+  }
+  property (FieldName) {
+    type (fieldName)
+    min (Optional) max (Many)
+  }
+  property (SeasonName) {
+    type (seasonName)
+    min (Optional) max (Many)
+  }
+  property (MatchDate) {
+    type (matchDate)
+    min (Optional) max (Many)
+  }
+  property (HomeTeamImageUrl) {
+    type (homeTeamImageUrl)
+    min (Optional) max (Many)
+  }
+  property (AwayTeamImageUrl) {
+    type (awayTeamImageUrl)
+    min (Optional) max (Many)
+  }
+  property (MatchTime) {
+    type (matchTime)
+    min (Optional) max (Many)
+  }
+  property (GameStatus) {
+    type (gameStatus)
+    min (Optional) max (Many)
+  }
+  property (AwayShootOut) {
+    type (awayShootOut)
+    min (Optional) max (Many)
+  }
+  property (HomeShootOut) {
+    type (homeShootOut)
+    min (Optional) max (Many)
+  }
+  property (GameRound) {
+    type (gameRound)
+    min (Optional) max (Many)
+  }
+  property (AwayTeamId) {
+    type (awayTeamId)
+    min (Optional) max (Many)
+  }
+  property (GameId) {
+    type (gameId)
+    min (Optional) max (Many)
+  }
+  property (HomeTeamId) {
+    type (homeTeamId)
+    min (Optional) max (Many)
+  }
+  property (Category) {
+    type (category)
+    min (Optional) max (Many)
+  }
+  property (Check) {
+    type (check)
+    min (Optional) max (Many)
+  }
+  property (Check2) {
+    type (check2)
+    min (Optional) max (Many)
+  }
+  property (Check3){
+    type (check3)
+    min (Optional) max (Many)
+  }
+  property (Answer){
+    type (answer)
+    min (Required) max (Many)
+  }
+}

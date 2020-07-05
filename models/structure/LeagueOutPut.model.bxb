@@ -1,0 +1,35 @@
+structure (LeagueOutPut) {
+  description (__DESCRIPTION__)
+  property (LeagueName) {
+    type (leagueName)
+    min (Optional) max (Many)
+  }
+  property (FromYear) {
+    type (fromYear)
+    min (Optional) max (One)
+  }
+  property (FromMonth) {
+    type (fromMonth)
+    min (Optional) max (One)
+  }
+  property (FromDay) {
+    type (fromDay)
+    min (Optional) max (One)
+  }
+  property (ToYear) {
+    type (toYear)
+    min (Optional) max (One)
+  }
+  property (ToMonth) {
+    type (toMonth)
+    min (Optional) max (One)
+  }
+  property (ToDay) {
+    type (toDay)
+    min (Optional) max (One)
+  }
+  property (SoccerTeamName) {
+    type (soccerTeamName)
+    min (Optional) max (One)
+  }
+}

@@ -1,0 +1,3 @@
+text (period) {
+  description (득점한 시간이 전반전인지 후반전인지 연장전인지)
+}

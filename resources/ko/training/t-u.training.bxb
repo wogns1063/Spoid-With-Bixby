@@ -1,0 +1,5 @@
+train (t-uaxmtns0e3b0sc1zip2sip09o) {
+  utterance ("[g:getTeamName] (바이에른 뮌헨)[v:soccerTeamName:'바이에른 뮌헨'] 경기 알려줘")
+  plan (Y2BmkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWWQQpYozk9OTi2CyzExMAIxA5BkZAABKB8A)
+  last-modified (1591199088257)
+}

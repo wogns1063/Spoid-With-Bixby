@@ -1,0 +1,3 @@
+text (gameRound) {
+  description (해당 리그의 Round를 표시합니다.)
+}

@@ -1,0 +1,3 @@
+integer (seasonOneDepth) {
+  description (처음 시즌)
+}

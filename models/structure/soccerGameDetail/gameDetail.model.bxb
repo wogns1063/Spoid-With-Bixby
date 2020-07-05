@@ -1,0 +1,39 @@
+structure (gameDetail) {
+  description (축구 경기 내용 구조체)
+  property (GameSummary) {
+    type (gameSummary)
+    min (Required) max (One)
+  }
+  property (AwayGoalPerson) {
+    type (awayGoalPerson)
+    min (Optional) max (Many)
+  }
+  property (HomeGoalPerson) {
+    type (homeGoalPerson)
+    min (Optional) max (Many)
+  }
+  property (Home) {
+    type (home)
+    min (Required) max (One)
+  }
+  property (Away) {
+    type (away)
+    min (Required) max (One)
+  }
+  property (NextMatchHome) {
+    type (nextMatchHome)
+    min (Optional) max (One)
+  }
+  property (NextMatchAway) {
+    type (nextMatchAway)
+    min (Optional) max (One)
+  }
+  property (HighLightURL) {
+    type (highLightURL)
+    min (Optional) max (One)
+  }
+  property (HighLightImageURL) {
+    type (highLightImageURL)
+    min (Optional) max (One)
+  }
+}

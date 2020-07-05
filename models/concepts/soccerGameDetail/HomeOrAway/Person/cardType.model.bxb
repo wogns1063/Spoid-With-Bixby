@@ -1,0 +1,3 @@
+text (cardType) {
+  description (선수가 받은 카드 색)
+}

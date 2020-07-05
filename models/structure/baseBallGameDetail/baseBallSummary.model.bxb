@@ -1,0 +1,71 @@
+structure (baseBallSummary) {
+  description (__DESCRIPTION__)
+  property (PitcherDetail) {
+    type (pitcherDetail)
+    min (Optional) max (One)
+  }
+  property (HrBat) {
+    type (core.BaseImage)
+    min (Optional) max (Many)
+  }
+  property (SeasonOneDepth) {
+    type (seasonOneDepth)
+    min (Optional) max (One)
+  }
+  property (EngLeagueName) {
+    type (engLeagueName)
+    min (Optional) max (One)
+  }
+  property (HomeTeamName) {
+    type (homeTeamName)
+    min (Required) max (One)
+  }
+  property (AwayTeamName) {
+    type (awayTeamName)
+    min (Required) max (One)
+  }
+  property (HomeTeamImageUrl) {
+    type (homeTeamImageUrl)
+    min (Required) max (One)
+  }
+  property (AwayTeamImageUrl) {
+    type (awayTeamImageUrl)
+    min (Required) max (One)
+  }
+  property (GameStatus) {
+    type (gameStatus)
+    min (Required) max (One)
+  }
+  property (FieldName) {
+    type (fieldName)
+    min (Required) max (One)
+  }
+  property (GameRound) {
+    type (gameRound)
+    min (Optional) max (One)
+  }
+  property (Check) {
+    type (check)
+    min (Optional) max (One)
+  }
+  property (HomeScore) {
+    type (homeScore)
+    min (Required) max (One)
+  }
+  property (AwayScore) {
+    type (awayScore)
+    min (Required) max (One)
+  }
+  property (MatchDate) {
+    type (matchDate)
+    min (Required) max (One)
+  }
+  property (MatchTime) {
+    type (matchTime)
+    min (Required) max (One)
+  }
+  property (GameId){
+    type (gameId)
+    min (Optional) max(One)
+  }
+}

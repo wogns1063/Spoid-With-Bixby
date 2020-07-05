@@ -1,0 +1,87 @@
+structure (rankOutPut) {
+  description (리그 순위를 알려주는 액션 OutPut입니다.)
+  property (Draw) {
+    type (draw)
+    min (Optional) max (One)
+  }
+  property (Game) {
+    type (game)
+    min (Optional) max (One)
+  }
+  property (GetScore) {
+    type (getScore)
+    min (Optional) max (One)
+  }
+  property (GoalGap) {
+    type (goalGap)
+    min (Optional) max (One)
+  }
+  property (Loss) {
+    type (loss)
+    min (Optional) max (One)
+  }
+  property (LossScore) {
+    type (lossScore)
+    min (Optional) max (One)
+  }
+  property (Rank) {
+    type (rank)
+    min (Optional) max (One)
+  }
+  property (VictoryPoint) {
+    type (victoryPoint)
+    min (Optional) max (One)
+  }
+  property (Win) {
+    type (win)
+    min (Optional) max (One)
+  }
+  property (TeamName) {
+    type (teamName)
+    min (Optional) max (One)
+  }
+  property (Name) {
+    type (name)
+    min (Required) max (One)
+  }
+  property (TeamImageUrl) {
+    type (teamImageUrl)
+    min (Optional) max (One)
+  }
+  property (Tmp) {
+    type (tmp)
+    min (Optional) max (One)
+  }
+  property (Group) {
+    type (group)
+    min (Optional) max (One)
+  }
+  property (EngLeagueName) {
+    type (engLeagueName)
+    min (Required) max (One)
+  }
+  property (Category) {
+    type (category)
+    min (Required) max (One)
+  }
+  property (GB) {
+    type (gb)
+    min (Optional) max (One)
+  }
+  property (Times) {
+    type (times)
+    min (Optional) max (One)
+  }
+  property (WinRate) {
+    type (winRate)
+    min (Optional) max (One)
+  }
+  property (District) {
+    type (district)
+    min (Optional) max (One)
+  }
+  property (SubLeagueName) {
+    type (subLeagueName)
+    min (Optional) max (One)
+  }
+}

@@ -1,0 +1,3 @@
+integer (homeScore) {
+  description (homeTeam 점수)
+}

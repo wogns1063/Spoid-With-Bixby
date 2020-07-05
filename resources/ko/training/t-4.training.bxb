@@ -1,0 +1,30 @@
+train (t-4hww731wvbh76gb8ydjbe2e1c) {
+  utterance ("[g:jaehoon.epl.getLeagueNameSeason] (12)[v:jaehoon.epl.seasonOneDepth:12] 시즌 (오클랜드)[v:jaehoon.epl.baseballTeamName:오클랜드] 경기 보여줘")
+  plan (TUvZCYAwFIvHBH6K4AZO4aeooAs8IShSW6Ht/rYK0gQSyIES1Sk8jNEdb9UZ72bv0KbZTjdQds9RLi4UazSadLCJ5SZKrZQrblCnrX0fk2bP2x0okCEPiuCRH/70AQ==)
+  last-modified (1591294045730)
+}
+train (t-4i9zuqoyh6x4jfktbj7fooppj) {
+  utterance ("[g:jaehoon.epl.getTeamName] (8)[v:jaehoon.epl.fromMonth:8]월 (1)[v:jaehoon.epl.fromDay:1]일부터 (3)[v:jaehoon.epl.toMonth:3]월 (1)[v:jaehoon.epl.toDay:1]일까지 (PSV 아인트호벤)[v:jaehoon.epl.soccerTeamName:'PSV 아인트호벤'] 경기 결과 보여주삼")
+  plan (Y2BnkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRpZIK8rPdUmsZBBFF/TNzyvJYJBCFi7OT05OLYKbI4gsV5IPMkUYVQhiBhsDIwMTAzMDCwMrkM0A5CEgMkBTBwA=)
+  last-modified (1591202672786)
+}
+train (t-4k037z3fbohiv3k43uwcl6ebc) {
+  utterance ("[g:jaehoon.epl.getLeagueRank2] (16)[v:jaehoon.epl.seasonOneDepth:16] (17)[v:jaehoon.epl.seasonTwoDepth:17] 시즌 (유로파리그)[v:jaehoon.epl.leagueName:유로파리그] (준결승)[v:jaehoon.epl.round:4강] 대진표 알려줘")
+  plan (Y2BjEM9KTM3Iz8/TSy3I0StKzMv2Ly0JKC0xYpBClkhPLfFJTUwvTQ0CqjBiEEOWywFL+CXmpjIIohiWX5qXgmpMcWpicX6ef16qS2pBSQY2uZDyfIgcKwMjAxMDMwMLkMUAZMMgAqCoAAA=)
+  last-modified (1591251695204)
+}
+train (t-4now1qbukq2c719pdnpbxahtm) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (3)[v:jaehoon.epl.fromMonth:3]월 (유로파)[v:jaehoon.epl.leagueName:유로파리그] 경기 일정 궁금해")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBFlkorys/1zc8ryWAQQxbOQShnZmBkYAKSDEAaBCEALgoA)
+  last-modified (1591199729585)
+}
+train (t-4ongg199g4wbr24kkblnxeerc) {
+  utterance ("[g:jaehoon.epl.getLeagueNameDateTimeExpression] (내일)[v:viv.time.DateTimeExpression] (미국야구)[v:jaehoon.epl.leagueName:메이저리그] (콜로라도)[v:jaehoon.epl.baseballTeamName:콜로라도] 경기 보고싶다")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPY5BBVpyUWJyalJiTE5KamAtSzyCGLJsDN4dBuiyzTK8EaJIeFiNZGBgZmBiYgTQDkAWBMIAkBwA=)
+  last-modified (1591295031765)
+}
+train (t-4z7bc22bkyn3b0k7cgmkfjezn) {
+  utterance ("[g:getLeagueName] (19)[v:jaehoon.epl.fromYear:19]년 (워싱턴)[v:baseballTeamName:워싱턴] 경기 알려줘")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZZBBlkpKLE5NSszJCUlNzAXLiiDLphXl50amJhYxMDMwMjABSQYgDYIQABcFAA==)
+  last-modified (1591288472595)
+}

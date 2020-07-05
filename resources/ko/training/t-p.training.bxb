@@ -1,0 +1,20 @@
+train (t-p3v91vgrxy3yccqnf4ikkudb8) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (2019)[v:jaehoon.epl.fromYear:2019]년 (8)[v:jaehoon.epl.fromMonth:8]월 (1)[v:jaehoon.epl.fromDay:1]일부터 (2020)[v:jaehoon.epl.toYear:2020]년 (3)[v:jaehoon.epl.toMonth:3]월까지 (일본야구)[v:jaehoon.epl.leagueName:일본프로야구] (히로시마)[v:jaehoon.epl.baseballTeamName:히로시마] 경기 보여줘")
+  plan (Y+BkEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZZBBlkpKLE5NSszJCUlNzAXLCiPLphXl57okVjKIogv65ueVZDCIoAtHpiYWMYghi+Yg7EUxuSQfYoQQqiDYAA4GRgYmBmYGFgZWBjYGdiCfASiCCtEBFj0A)
+  last-modified (1591290746691)
+}
+train (t-pm301gozpuaie7z4mkxxly4p3) {
+  utterance ("[g:getTeamName] (18)[v:fromYear]년 (8)[v:fromMonth]월부터 (11)[v:toMonth]월까지 (빌럼 II)[v:soccerTeamName:'빌럼 II'] 경기 알려줘")
+  plan (Y2BjkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgEEEXjkxNLGKQQhYtzk9OTi2CGySMLFeSDzGGlYGRgYmBmYEFyGIAsmEQAVBUAAA=)
+  last-modified (1591202940879)
+}
+train (t-prkeb3ddk561gp0wv2cu4vi3w) {
+  utterance ("[g:getTeamName] (2017)[v:fromYear:2017]년 (도르트문트)[v:soccerTeamName:도르트문트] 경기 보여줘")
+  plan (Y2BhkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQQZZIK8rPjUxNLGKQQhYtzk9OTi2C62BmYGRgApIMQBoEIQAuCgA=)
+  last-modified (1591266785016)
+}
+train (t-pvnlm5yxsj7yrrlkvy3bbm248) {
+  utterance ("[g:jaehoon.epl.getLeagueRank] (19)[v:jaehoon.epl.seasonOneDepth:19] (20)[v:jaehoon.epl.seasonTwoDepth:20] 시즌 (프리미어리그)[v:jaehoon.epl.leagueName:프리미어리그] 순위표 알려줘")
+  plan (Y2BlEMtKTM3Iz8/TSy3I0StKzMv2Ly0JKC1hkEQWT08t8UlNTC9NDQIqQNWSAxb3S8xNZZBCFi9OTSzOz/PPS3VJLSjJwCYXUp4PkWNhYGRgYmAG0gxAFgTCAJIcAA==)
+  last-modified (1592286296570)
+}

@@ -1,0 +1,51 @@
+structure (rankOutPut2) {
+  description (챔피언스리그 및 유로파리그 순위표 (32강, 16강, 8강, 4강, 결승을 나타냄))
+  property (HomeTeamName) {
+    type (homeTeamName)
+    min (Optional) max (One)
+  }
+  property (EngLeagueName) {
+    type (engLeagueName)
+    min (Required) max (One)
+  }
+  property (AwayTeamName) {
+    type (awayTeamName)
+    min (Optional) max (One)
+  }
+  property (HomeTeamImageUrl) {
+    type (homeTeamImageUrl)
+    min (Optional) max (One)
+  }
+  property (AwayTeamImageUrl) {
+    type (awayTeamImageUrl)
+    min (Optional) max (One)
+  }
+  property (AwayTotalScore) {
+    type (awayTotalScore)
+    min (Optional) max (One)
+  }
+  property (HomeTotalScore) {
+    type (homeTotalScore)
+    min (Optional) max (One)
+  }
+  property (HomeShootOut) {
+    type (homeShootOut)
+    min (Optional) max (One)
+  }
+  property (AwayShootOut) {
+    type (awayShootOut)
+    min (Optional) max (One)
+  }
+  property (GameRound) {
+    type (gameRound)
+    min (Required) max (One)
+  }
+  property (Round1) {
+    type (round1)
+    min (Optional) max (One)
+  }
+  property (Round2) {
+    type (round2)
+    min (Optional) max (One)
+  }
+}

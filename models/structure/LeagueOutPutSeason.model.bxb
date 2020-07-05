@@ -1,0 +1,19 @@
+structure (LeagueOutPutSeason) {
+  description (__DESCRIPTION__)
+  property (SeasonOneDepth) {
+    type (seasonOneDepth)
+    min (Optional) max (Many)
+  }
+  property (SeasonTwoDepth) {
+    type (seasonTwoDepth)
+    min (Optional) max (Many)
+  }
+  property (LeagueName) {
+    type (leagueName)
+    min (Optional) max (Many)
+  }
+  property (SoccerTeamName) {
+    type (soccerTeamName)
+    min (Optional) max (Many)
+  }
+}

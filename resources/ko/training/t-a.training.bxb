@@ -1,0 +1,20 @@
+train (t-a5oh1qldlkwyk5tzwvy23r0sk) {
+  utterance ("[g:jaehoon.epl.getTeamNameDateTimeExpression] (내일)[v:viv.time.DateTimeExpression] (뉴캐슬)[v:jaehoon.epl.soccerTeamName:뉴캐슬] 경기 일정 알려줘")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591247660963)
+}
+train (t-a8odbg2amft29t6baftq5ns1r) {
+  utterance ("[g:jaehoon.epl.getLeagueRank] (15)[v:jaehoon.epl.seasonOneDepth:15] (16)[v:jaehoon.epl.seasonTwoDepth:16] 시즌 (에레디비 시)[v:jaehoon.epl.leagueName:에레디비시] 순위표 알려줘")
+  plan (Y2BlEMtKTM3Iz8/TSy3I0StKzMv2Ly0JKC1hkEQWT08t8UlNTC9NDQIqQNWSAxb3S8xNZZBCFi9OTSzOz/PPS3VJLSjJwCYXUp4PkWNhYGRgYmAG0gxAFgTCAJIcAA==)
+  last-modified (1591261150633)
+}
+train (t-attqt3z93nygux9i7z648le82) {
+  utterance ("[g:jaehoon.epl.getTeamName] (2019)[v:jaehoon.epl.fromYear:2019]년 (3)[v:jaehoon.epl.fromMonth:3]월 (릴)[v:jaehoon.epl.soccerTeamName:릴] 경기 알려줘")
+  plan (Y2BlkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgEEEXjkxNLGKQQhYtzk9OTi2CG8TCwMjAxMAMpBmALAiEASQ5AA==)
+  last-modified (1591605008471)
+}
+train (t-ayzibkopehfy878ypqfj771ra) {
+  utterance ("[g:getLeagueNameDateTimeExpression] (저 저번 주)[v:viv.time.DateTimeExpression] (일본프로야구)[v:leagueName:일본프로야구] 경기 보여줘")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPYxBDVpwDV8kgXZZZplcCVKuHRRMzAyMDE5BkANIgCAFwUQA=)
+  last-modified (1591294916927)
+}

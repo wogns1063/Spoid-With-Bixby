@@ -1,0 +1,23 @@
+structure (baseBallGameDetail) {
+  description (__DESCRIPTION__)
+  property (BaseBallSummary) {
+    type (baseBallSummary)
+    min (Required) max (One)
+  }
+  property (HomeTeam) {
+    type (homeTeam)
+    min (Optional) max (One)
+  }
+  property (AwayTeam) {
+    type (awayTeam)
+    min (Optional) max (One)
+  }
+  property (NextMatchHome) {
+    type (nextMatchHome)
+    min (Optional) max (One)
+  }
+  property (NextMatchAway) {
+    type (nextMatchAway)
+    min (Optional) max (One)
+  }
+}

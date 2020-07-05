@@ -1,0 +1,55 @@
+structure (bat) {
+  description (__DESCRIPTION__)
+  property (BatAb) {
+    type (batAb)
+    min (Optional) max (One)
+  }
+  property (BatH) {
+    type (batH)
+    min (Optional) max (One)
+  }
+  property (Bat2b) {
+    type (bat2b)
+    min (Optional) max (One)
+  }
+  property (Bat3b) {
+    type (bat3b)
+    min (Optional) max (One)
+  }
+  property (BatHr) {
+    type (batHr)
+    min (Optional) max (One)
+  }
+  property (BatR) {
+    type (batR)
+    min (Optional) max (One)
+  }
+  property (BatRbi) {
+    type (batRbi)
+    min (Optional) max (One)
+  }
+  property (BatSo) {
+    type (batSo)
+    min (Optional) max (One)
+  }
+  property (BatBb) {
+    type (batBb)
+    min (Optional) max (One)
+  }
+  property (BatAvg) {
+    type (batAvg)
+    min (Optional) max (One)
+  }
+  property (PositionName) {
+    type (positionName)
+    min (Optional) max (One)
+  }
+  property (PlayerName) {
+    type (playerName)
+    min (Optional) max (One)
+  }
+  property (PlayerImg) {
+    type (playerImg)
+    min (Optional) max (One)
+  }
+}

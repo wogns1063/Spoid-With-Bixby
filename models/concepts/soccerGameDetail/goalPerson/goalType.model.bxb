@@ -1,0 +1,3 @@
+text (goalType) {
+  description (골 먹힌 유형)
+}

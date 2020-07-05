@@ -1,0 +1,5 @@
+enum (position) {
+  symbol (투수)
+  symbol (타자)
+  symbol (선수)
+}

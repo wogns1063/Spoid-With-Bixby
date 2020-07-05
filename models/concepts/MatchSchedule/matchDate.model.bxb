@@ -1,0 +1,3 @@
+text (matchDate) {
+  description (경기 시작 날자 밎 시간)
+}

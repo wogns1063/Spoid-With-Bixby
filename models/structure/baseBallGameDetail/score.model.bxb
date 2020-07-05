@@ -1,0 +1,11 @@
+structure (score) {
+  description (__DESCRIPTION__)
+  property (Check) {
+    type (check)
+    min (Optional) max (One)
+  }
+  property (InningScore) {
+    type (inningScore)
+    min (Optional) max (One)
+  }
+}

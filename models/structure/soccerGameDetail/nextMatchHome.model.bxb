@@ -1,0 +1,79 @@
+structure (nextMatchHome) {
+  description (다음 경기 일정)
+  property (HomeTeamName) {
+    type (homeTeamName)
+    min (Optional) max (One)
+  }
+  property (AwayTeamName) {
+    type (awayTeamName)
+    min (Optional) max (One)
+  }
+  property (AwayScore) {
+    type (awayScore)
+    min (Optional) max (One)
+  }
+  property (HomeScore) {
+    type (homeScore)
+    min (Optional) max (One)
+  }
+  property (FieldName) {
+    type (fieldName)
+    min (Optional) max (One)
+  }
+  property (SeasonName) {
+    type (seasonName)
+    min (Optional) max (One)
+  }
+  property (MatchDate) {
+    type (matchDate)
+    min (Optional) max (One)
+  }
+  property (HomeTeamImageUrl) {
+    type (homeTeamImageUrl)
+    min (Optional) max (One)
+  }
+  property (AwayTeamImageUrl) {
+    type (awayTeamImageUrl)
+    min (Optional) max (One)
+  }
+  property (MatchTime) {
+    type (matchTime)
+    min (Optional) max (One)
+  }
+  property (GameStatus) {
+    type (gameStatus)
+    min (Optional) max (One)
+  }
+  property (AwayShootOut) {
+    type (awayShootOut)
+    min (Optional) max (One)
+  }
+  property (HomeShootOut) {
+    type (homeShootOut)
+    min (Optional) max (One)
+  }
+  property (GameRound) {
+    type (gameRound)
+    min (Optional) max (One)
+  }
+  property (AwayTeamId) {
+    type (awayTeamId)
+    min (Optional) max (One)
+  }
+  property (GameId) {
+    type (gameId)
+    min (Optional) max (One)
+  }
+  property (HomeTeamId) {
+    type (homeTeamId)
+    min (Optional) max (One)
+  }
+  property (Category) {
+    type (category)
+    min (Optional) max (One)
+  }
+  property (Check) {
+    type (check)
+    min (Optional) max (One)
+  }
+}

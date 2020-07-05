@@ -1,0 +1,35 @@
+train (t-803k63z0x7vg003z92c0ol4bf) {
+  utterance ("[g:getLeagueRank2] (18)[v:jaehoon.epl.seasonOneDepth:18] (19)[v:jaehoon.epl.seasonTwoDepth:19] 시즌 (챔스)[v:jaehoon.epl.leagueName:챔피언스리그] (16강)[v:round:16강] 대진표 알려줘")
+  plan (Y2BjEM9KTM3Iz8/TSy3I0StKzMv2Ly0JKC0xYpBClkhPLfFJTUwvTQ0CqjBiEEOWywFL+CXmpjIIohiWX5qXgmpMcWpicX6ef16qS2pBSQY2uZDyfIgcKwMjAxMDMwMLkMUAZMMgAqCoAAA=)
+  last-modified (1591251493233)
+}
+train (t-81uq01ykubu6gqtsl024b2qlv) {
+  utterance ("[g:getLeagueName] (애리조나)[v:baseballTeamName:애리조나] 경기 알려줘")
+  plan (Y2BmEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZZBBlkpKLE5NSszJCUlNzAXLMjEwAjEDkGRkAAEoHwA=)
+  last-modified (1591296533348)
+}
+train (t-89g2amr5i90u0t7gwbbok1na1) {
+  utterance ("[g:jaehoon.epl.getLeagueNameSeason] (2018)[v:jaehoon.epl.seasonOneDepth:2018] (2019)[v:jaehoon.epl.seasonTwoDepth:2019] 시즌 (라리가)[v:jaehoon.epl.leagueName:라리가] (오사수나)[v:jaehoon.epl.soccerTeamName:오사수나] 경기 알려줘")
+  plan (Y2BjEMpKTM3Iz8/TSy3I0csvLQkoLWGQRxZLTy3xSU1ML031S8xNDU5NLM7PYxBDVpADl2WQQhYvBqv1z0t1SS0oycAmF1Kej00uPzk5tSgkNTEXbCYrAyMDEwMzAwuQxQBkwyACoKgAAA==)
+  last-modified (1591604667482)
+}
+train (t-8pkpz686r91omxr9lidwxwltb) {
+  utterance ("[g:jaehoon.epl.getLeagueNameDateTimeExpression] (요즘)[v:time.DateTimeExpression]에 (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] 경기 알려줘")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPYxBDVpwDV8kgXZZZplcCVKuHRRMzAyMDE5BkANIgCAFwUQA=)
+  last-modified (1591249229509)
+}
+train (t-8umujd7hssw1bu0jhvqu9xli5) {
+  utterance ("[g:jaehoon.epl.getLeagueRank2] (17)[v:jaehoon.epl.seasonOneDepth:17] (18)[v:jaehoon.epl.seasonTwoDepth:18] 시즌 (챔스)[v:jaehoon.epl.leagueName:챔피언스리그] (결승)[v:jaehoon.epl.round:결승] 대진표 알려줘")
+  plan (Y2BjEM9KTM3Iz8/TSy3I0StKzMv2Ly0JKC0xYpBClkhPLfFJTUwvTQ0CqjBiEEOWywFL+CXmpjIIohiWX5qXgmpMcWpicX6ef16qS2pBSQY2uZDyfIgcKwMjAxMDMwMLkMUAZMMgAqCoAAA=)
+  last-modified (1592286601093)
+}
+train (t-8vw9ryk6xlyzbaa72psmky2qi) {
+  utterance ("[g:getLeagueRank] (16)[v:jaehoon.epl.seasonOneDepth:16] (17)[v:jaehoon.epl.seasonTwoDepth:17] 시즌 (프리미어리그)[v:jaehoon.epl.leagueName:프리미어리그] 순위표 알려줘")
+  plan (Y2BlEMtKTM3Iz8/TSy3I0StKzMv2Ly0JKC1hkEQWT08t8UlNTC9NDQIqQNWSAxb3S8xNZZBCFi9OTSzOz/PPS3VJLSjJwCYXUp4PkWNhYGRgYmAG0gxAFgTCAJIcAA==)
+  last-modified (1591252035102)
+}
+train (t-8xv3rr62as1zzdl48tzcmj6uu) {
+  utterance ("[g:jaehoon.epl.getTeamName] (3)[v:jaehoon.epl.fromMonth:3]월 (크리스탈 팰리스)[v:jaehoon.epl.soccerTeamName:'크리스탈 팰리스'] 경기 결과 알려줄래")
+  plan (Y2BhkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgkEIWLs5PTk4tgmthZmBkYAKSDEAaBCEALgoA)
+  last-modified (1591202434669)
+}

@@ -1,0 +1,57 @@
+endpoints {
+  action-endpoints {
+    //Uncomment the lines below and enter the information for actions, inputs, and the appropriate local or remote endpoints
+    action-endpoint (getLeagueName) {
+      accepted-inputs (LeagueName,SoccerTeamName, BaseballTeamName,FromYear, FromMonth, FromDay, ToYear, ToMonth, ToDay)
+      local-endpoint ("getLeagueName.js")
+    }
+    action-endpoint (getLeagueNameSeason) {
+      accepted-inputs (LeagueName,BaseballTeamName, SeasonOneDepth, SeasonTwoDepth, SoccerTeamName)
+      local-endpoint ("getLeagueNameSeason.js")
+    }
+    action-endpoint (getTeamNameSeason) {
+      accepted-inputs (LeagueName, SeasonOneDepth, SeasonTwoDepth, SoccerTeamName)
+      local-endpoint ("getTeamNameSeason.js")
+    }
+    action-endpoint (getLeagueNameDateTimeExpression) {
+      accepted-inputs (dateTimeExpression, BaseballTeamName , SoccerTeamName ,LeagueName)
+      local-endpoint ("getLeagueNameDateTimeExpression.js")
+    }
+    action-endpoint (getTeamNameDateTimeExpression) {
+      accepted-inputs (dateTimeExpression, SoccerTeamName ,LeagueName)
+      local-endpoint ("getTeamNameDateTimeExpression.js")
+    }
+    action-endpoint (getLeagueRank) {
+      accepted-inputs (LeagueName, SeasonOneDepth, SeasonTwoDepth)
+      local-endpoint ("getLeagueRank.js")
+    }
+    action-endpoint (getLeagueRank2) {
+      accepted-inputs (LeagueName, Round, SeasonOneDepth, SeasonTwoDepth)
+      local-endpoint ("getLeagueRank2.js")
+    }
+    action-endpoint (getPitcherBatRank) {
+      accepted-inputs (LeagueName, Position, SeasonOneDepth, SeasonTwoDepth)
+      local-endpoint ("getPitcherBatRank.js")
+    }
+    action-endpoint (getSoccerGameDetail) {
+      accepted-inputs (GameId, Category)
+      local-endpoint ("getSoccerGameDetail.js")
+    }
+    action-endpoint (getBaseBallDetail) {
+      accepted-inputs (GameId, Category)
+      local-endpoint ("getBaseBallGameDetail.js")
+    }
+    action-endpoint (getBatDetail) {
+      accepted-inputs (GameId)
+      local-endpoint ("getBatDetail.js")
+    }
+    action-endpoint (getPitcherDetail) {
+      accepted-inputs (GameId)
+      local-endpoint ("getPitcherDetail.js")
+    }
+    action-endpoint (getTeamName) {
+      accepted-inputs (LeagueName, SoccerTeamName, FromYear, FromMonth, FromDay, ToYear, ToMonth, ToDay)
+      local-endpoint ("getTeamName.js")
+    }
+  }
+}

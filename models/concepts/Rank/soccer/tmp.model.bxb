@@ -1,0 +1,3 @@
+text (tmp) {
+  description (layout에서 쓰기위한 임시변수)
+}

@@ -1,0 +1,3 @@
+text (gameId) {
+  description (해당 날짜 경기 게임 ID를 가져옵니다.)
+}

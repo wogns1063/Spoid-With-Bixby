@@ -1,0 +1,19 @@
+action (getBatDetail) {
+  type(Search)
+  description (__DESCRIPTION__)
+  collect {
+    input (GameId) {
+      type (gameId)
+      min (Optional) max (One)
+    }
+  }
+  output (baseBallGameDetail){
+    on-empty{
+      halt{
+        dialog{
+          template ("경기 정보가 없습니다.")
+        }
+      }
+    }
+  }
+}

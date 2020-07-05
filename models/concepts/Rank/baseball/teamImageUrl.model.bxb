@@ -1,0 +1,3 @@
+text (teamImageUrl) {
+  description (해당 팀 마크를 가져옵니다.)
+}

@@ -1,0 +1,75 @@
+structure (gameSummary) {
+  description (화면에 보여줄 결과값들)
+  property (HomeTeamName) {
+    type (homeTeamName)
+    min (Required) max (One)
+  }
+  property (AwayTeamName) {
+    type (awayTeamName)
+    min (Required) max (One)
+  }
+  property (AwayScore) {
+    type (awayScore)
+    min (Required) max (One)
+  }
+  property (HomeScore) {
+    type (homeScore)
+    min (Required) max (One)
+  }
+  property (FieldName) {
+    type (fieldName)
+    min (Required) max (One)
+  }
+  property (MatchDate) {
+    type (matchDate)
+    min (Required) max (One)
+  }
+  property (HomeTeamImageUrl) {
+    type (homeTeamImageUrl)
+    min (Required) max (One)
+  }
+  property (AwayTeamImageUrl) {
+    type (awayTeamImageUrl)
+    min (Required) max (One)
+  }
+  property (MatchTime) {
+    type (matchTime)
+    min (Required) max (One)
+  }
+  property (GameStatus) {
+    type (gameStatus)
+    min (Required) max (One)
+  }
+  property (EngLeagueName) {
+    type (engLeagueName)
+    min (Optional) max (One)
+  }
+  property (SeasonOneDepth) {
+    type (seasonOneDepth)
+    min (Optional) max (One)
+  }
+  property (SeasonTwoDepth) {
+    type (seasonTwoDepth)
+    min (Optional) max (One)
+  }
+  property (AwayShootOut) {
+    type (awayShootOut)
+    min (Optional) max (One)
+  }
+  property (HomeShootOut) {
+    type (homeShootOut)
+    min (Optional) max (One)
+  }
+  property (GameRound) {
+    type (gameRound)
+    min (Required) max (One)
+  }
+  property (Check) {
+    type (check)
+    min (Optional) max (One)
+  }
+  property (LeagueCheck) {
+    type (leagueCheck)
+    min (Optional) max (One)
+  }
+}

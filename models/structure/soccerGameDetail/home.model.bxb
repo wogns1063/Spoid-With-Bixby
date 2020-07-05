@@ -1,0 +1,19 @@
+structure (home) {
+  description (HomeTeam 경기 내용 구조체)
+  property (TeamName) {
+    type (teamName)
+    min (Optional) max (One)
+  }
+  property (Formation) {
+    type (formation)
+    min (Optional) max (One)
+  }
+  property (Person) {
+    type (person)
+    min (Optional) max (Many)
+  }
+  property (TeamStat) {
+    type (teamStat)
+    min (Optional) max (One)
+  }
+}

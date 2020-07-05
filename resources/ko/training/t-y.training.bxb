@@ -1,0 +1,15 @@
+train (t-yal85zbhpkz42jfvd4d7rgq6t) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (2019)[v:jaehoon.epl.fromYear:2019]년 (3)[v:jaehoon.epl.fromMonth:3]월 (1)[v:jaehoon.epl.fromDay:1]일 (리그 앙)[v:jaehoon.epl.leagueName:'리그 원'] 경기 알려주셈유")
+  plan (Y2BjEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBGlkorys91SaxkEEUX9M3PK8lgEEEXjkxNLGIQQxbNQZjMysDIwMTAzMACZDEA2TCIACgqAA==)
+  last-modified (1591199295003)
+}
+train (t-yv7fmnh17spj8vq6gno6xya7m) {
+  utterance ("[g:getLeagueName] (18)[v:fromYear]년 (8)[v:fromMonth]월부터 (11)[v:toMonth]월까지 (프리미어리그)[v:leagueName:프리미어리그] 경기 알려줘")
+  plan (Y2BjEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBFlkorys/1zc8ryWAQQReOTE0sYhBDFs1BGCKMLF6SDzGClYGRgYmBmYEFyGIAsmEQAVBUAAA=)
+  last-modified (1591196184833)
+}
+train (t-yx8zuy5z343mc47mw2bobdwp2) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (12)[v:jaehoon.epl.fromDay:12]일 (프리미어리그)[v:jaehoon.epl.leagueName:프리미어리그] 경기 알려줘")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBGlkorys91SaxkEEMWzEEoZmZgZGACkgxAGgQhAC4KAA==)
+  last-modified (1591199258045)
+}

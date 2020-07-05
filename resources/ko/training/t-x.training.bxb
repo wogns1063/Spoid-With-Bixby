@@ -1,0 +1,40 @@
+train (t-xf83rkoqaehretht3qaou2wcs) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (2018)[v:jaehoon.epl.fromYear:2018]년 (8)[v:jaehoon.epl.fromMonth:8]월 (2)[v:jaehoon.epl.fromDay:2]일부터 (11)[v:jaehoon.epl.toMonth:11]월 (3)[v:toDay]일까지 (라리가)[v:jaehoon.epl.leagueName:라리가] 경기 알려주삼")
+  plan (Y+BgEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBGlkorys91SaxkEEUX9M3PK8lgEEEXjkxNLGIQQxbNQZgsiCxekg8yVxhVCGIqOwMjAxMDMwMLAysDG5DHAOQjQ1SAoRoA)
+  last-modified (1591197830597)
+}
+train (t-xn84p95qx6k082c779umn53zw) {
+  utterance ("[g:jaehoon.epl.getTeamNameDateTimeExpression] (내일)[v:viv.time.DateTimeExpression] (스팔 2013)[v:jaehoon.epl.soccerTeamName:'스팔 2013'] 경기 보여줘")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591604976497)
+}
+train (t-xo6dp4g83cdx2svo5bjbcpxxq) {
+  utterance ("[g:getTeamNameDateTimeExpression] (저 저번 주)[v:viv.time.DateTimeExpression] (헤르타 베를린)[v:soccerTeamName:'헤르타 베를린'] 경기 일정 알려주겠니")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591604323243)
+}
+train (t-xol5iw58xnxjs6jmtyk6eymw1) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (2019)[v:jaehoon.epl.fromYear:2019]년 (8)[v:jaehoon.epl.fromMonth:8]월부터 (2020)[v:jaehoon.epl.toYear:2020]년 (3)[v:jaehoon.epl.toMonth:3]월 (1)[v:jaehoon.epl.toDay:1]일까지 (에레디비 시)[v:jaehoon.epl.leagueName:에레디비시] 경기 일정 알려줄래")
+  plan (Y+BgEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBFlkorys/1zc8ryWAQQReOTE0sYhBDFs1BGCKILF6S75JYySCMKgQxVQhVEGwmOwMjAxMDMwMLAysDG5DHAOQjQ1SAoRoA)
+  last-modified (1591199553317)
+}
+train (t-xptyj5k6f5f4r7tg6yiua2tme) {
+  utterance ("[g:jaehoon.epl.getLeagueRank] (18)[v:jaehoon.epl.seasonOneDepth:18] (19)[v:jaehoon.epl.seasonTwoDepth:19] 시즌 (라리가)[v:jaehoon.epl.leagueName:라리가] 순위표 알려줘")
+  plan (Y2BlEMtKTM3Iz8/TSy3I0StKzMv2Ly0JKC1hkEQWT08t8UlNTC9NDQIqQNWSAxb3S8xNZZBCFi9OTSzOz/PPS3VJLSjJwCYXUp4PkWNhYGRgYmAG0gxAFgTCAJIcAA==)
+  last-modified (1591252164340)
+}
+train (t-xsmpi85qb17rdbgwk6ange73h) {
+  utterance ("[g:jaehoon.epl.getPitcherBatRank] (17)[v:jaehoon.epl.seasonOneDepth:17] (18)[v:jaehoon.epl.seasonTwoDepth:18] 시즌 (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] (선수)[v:jaehoon.epl.position:선수] 순위표 알려줘")
+  plan (Y2BjkMlKTM3Iz8/TSy3I0SvILEnOSC1ySizxLy0JKC1hkEWWTU8tCYArCErMy2YQQ5bOSU1ML031S8xNZRBBMTS/OLMkMz+PQQpZtDg1sTg/zz8v1SW1oCQDm1xIeT5EjpWBkYGJgZmBBchiALJhEAFQVAAA)
+  last-modified (1591261041176)
+}
+train (t-xst2m2rpvmazi8m9n26h43du6) {
+  utterance ("[g:jaehoon.epl.getPitcherBatRank] (19)[v:jaehoon.epl.seasonOneDepth:19] 시즌 (일본야구)[v:jaehoon.epl.leagueName:일본프로야구] (투수)[v:jaehoon.epl.position:투수] 순위표 알려줘")
+  plan (Y2BlkMlKTM3Iz8/TSy3I0SvILEnOSC1ySizxLy0JKC1hkEWWTU8tCYArCErMy2YQQ5bOSU1ML031S8xNZRBBMTS/OLMkMz+PQQpZtDg1sTg/zz8v1SW1oCSDgYWBkYGJgRlIMwBZEAgDSHIA)
+  last-modified (1591252501299)
+}
+train (t-xtcrjnnpsxi5mmox6kb2lw0sp) {
+  utterance ("[g:jaehoon.epl.getTeamName] (스파르타 로테르담)[v:jaehoon.epl.soccerTeamName:'스파르타 로테르담'] 경기 일정 궁금해")
+  plan (Y2BmkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWWQQpYozk9OTi2CyzExMAIxA5BkZAABKB8A)
+  last-modified (1591203180241)
+}

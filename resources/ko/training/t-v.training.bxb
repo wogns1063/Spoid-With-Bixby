@@ -1,0 +1,15 @@
+train (t-vcmkwn5i17jbep5lpi80f67lh) {
+  utterance ("[g:jaehoon.epl.getLeagueRank] (17)[v:jaehoon.epl.seasonOneDepth:17] (18)[v:jaehoon.epl.seasonTwoDepth:18] 시즌 (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] 순위표 알려줘")
+  plan (Y2BlEMtKTM3Iz8/TSy3I0StKzMv2Ly0JKC1hkEQWT08t8UlNTC9NDQIqQNWSAxb3S8xNZZBCFi9OTSzOz/PPS3VJLSjJwCYXUp4PkWNhYGRgYmAG0gxAFgTCAJIcAA==)
+  last-modified (1591252219494)
+}
+train (t-vd7b8bu0daqoqj9j0wcafews8) {
+  utterance ("[g:jaehoon.epl.getTeamName] (19)[v:jaehoon.epl.fromYear:19]년 (3)[v:jaehoon.epl.fromMonth:3]월 (일)[v:soccerTeamName:릴] 경기 알려줘")
+  plan (Y2BlkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgEEEXjkxNLGKQQhYtzk9OTi2CG8TCwMjAxMAMpBmALAiEASQ5AA==)
+  last-modified (1591606965748)
+}
+train (t-voqotgbculgwbnbi39n6jpzzg) {
+  utterance ("[g:jaehoon.epl.getLeagueNameDateTimeExpression] (이번 주)[v:viv.time.DateTimeExpression] (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] (RB 라이프치히)[v:jaehoon.epl.soccerTeamName:'RB 라이프치히'] 경기 일정 알려주세요")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPYxBDVpwDV8kghSxenJ+cnFoUkpqYC5aTLsss0ysBmqOHxUAWBkYGJgZmIM0AZEEgDCDJAQA=)
+  last-modified (1591246957208)
+}

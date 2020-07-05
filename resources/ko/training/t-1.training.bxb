@@ -1,0 +1,40 @@
+train (t-12b36anugcn8b3jmqnpn3pqj0) {
+  utterance ("[g:jaehoon.epl.getTeamNameDateTimeExpression] (저 저번 주)[v:viv.time.DateTimeExpression] (토트넘)[v:jaehoon.epl.soccerTeamName:토트넘] 경기 보여줘")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591248628382)
+}
+train (t-17cv68jxutp5nz7urg1g18xlu) {
+  utterance ("[g:getLeagueRank2] (18)[v:seasonOneDepth:18] (19)[v:seasonTwoDepth:19] 시즌 (챔스)[v:leagueName:챔피언스리그] (결승)[v:round:결승] 대진표 알려줘")
+  plan (Y2BjEM9KTM3Iz8/TSy3I0StKzMv2Ly0JKC0xYpBClkhPLfFJTUwvTQ0CqjBiEEOWywFL+CXmpjIIohiWX5qXgmpMcWpicX6ef16qS2pBSQY2uZDyfIgcKwMjAxMDMwMLkMUAZMMgAqCoAAA=)
+  last-modified (1591288349392)
+}
+train (t-19k2sjbyc06vaeakos4u051zu) {
+  utterance ("[g:getLeagueNameSeason] (16)[v:seasonOneDepth:16] 시즌 (메이저리그)[v:leagueName:메이저리그] (LA다저스)[v:baseballTeamName:LA다저스] 경기 알려주라")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWGQRxZLTy3xSU1ML031S8xNDU5NLM7PY5BBVpCUWJyalJiTE5KamAtSwyCGLJsD18sghSxeDDbJPy/VJbWgJIOBhYGRgYmBGUgzAFkQCANIcgA=)
+  last-modified (1591293880009)
+}
+train (t-1cn2wz7bqe18jc90zk2jiljtz) {
+  utterance ("[g:getTeamNameDateTimeExpression] (이번 주)[v:time.DateTimeExpression] (SC 프라이부르크)[v:soccerTeamName:'SC 프라이부르크'] 경기 일정 알려줘")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591248487660)
+}
+train (t-1hovmcdgds2q4iaw4g35ubnne) {
+  utterance ("[g:getLeagueName] (19)[v:fromYear]년 (4)[v:fromMonth]월 (프리미어리그)[v:leagueName:프리미어리그] (토트넘)[v:soccerTeamName:토트넘] 경기 알려줘")
+  plan (Y2BjEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBFlkorys/1zc8ryWAQQReOTE0sYhBDFs1BGCKFLF6cn5ycWhSSmpgLlmNlYGRgYmBmYAGyGIBsGEQAFBUA)
+  last-modified (1591246587638)
+}
+train (t-1lso65fj0pmfxvrmhp60vff6l) {
+  utterance ("[g:getTeamNameDateTimeExpression] (저 저번 주)[v:viv.time.DateTimeExpression] (첼시)[v:soccerTeamName:첼시] 경기 알려줘")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591288360065)
+}
+train (t-1olvdb98i2idqrh19uhjl1xej) {
+  utterance ("[g:jaehoon.epl.getTeamName] (1)[v:jaehoon.epl.fromMonth:1]월 (스팔 2013)[v:jaehoon.epl.soccerTeamName:'스팔 2013'] 경기 궁금해")
+  plan (Y2BhkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgkEIWLs5PTk4tgmthZmBkYAKSDEAaBCEALgoA)
+  last-modified (1591604876912)
+}
+train (t-1r1329km59fwk14x1c1g4223p) {
+  utterance ("[g:getLeagueRank2] (18)[v:jaehoon.epl.seasonOneDepth:18] (19)[v:jaehoon.epl.seasonTwoDepth:19] 시즌 (챔스)[v:jaehoon.epl.leagueName:챔피언스리그] (16강)[v:round:16강] 대진표 알려줘")
+  plan (Y2BjEM9KTM3Iz8/TSy3I0StKzMv2Ly0JKC0xYpBClkhPLfFJTUwvTQ0CqjBiEEOWywFL+CXmpjIIohiWX5qXgmpMcWpicX6ef16qS2pBSQY2uZDyfIgcKwMjAxMDMwMLkMUAZMMgAqCoAAA=)
+  last-modified (1591252651145)
+}

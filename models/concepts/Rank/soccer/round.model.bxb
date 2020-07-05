@@ -1,0 +1,8 @@
+enum (round) {
+  description (32강, 16강, 8강, 결승 등을 나타내는 변수)
+  symbol (32강)
+  symbol (16강)
+  symbol (8강)
+  symbol (4강)
+  symbol (결승)
+}

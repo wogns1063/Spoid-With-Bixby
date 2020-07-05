@@ -1,0 +1,71 @@
+action (getLeagueRank) {
+  description (축구리그 순위표를 가져옵니다.)
+  type(Search)
+  collect {
+    input (SeasonOneDepth) {
+      type (seasonOneDepth)
+      min (Optional) max (One)
+    }
+    input (SeasonTwoDepth) {
+      type (seasonTwoDepth)
+      min (Optional) max (One)
+    }
+    input (LeagueName) {
+        type (leagueName)
+        min (Optional) max (One)
+      }
+  }
+  output (rankOutPut){
+    on-empty{
+      halt{
+        dialog{
+          template ("해당 기간 경기 일정이 없습니다.")
+        }
+      }
+    }
+    throws{
+      error (LongTearm){
+        on-catch{
+          halt{
+            dialog("한 시즌씩 검색할 수 있습니다. 다시 설정해 주세요.")
+          }
+        }
+      }
+      error (noSupportCup){
+        on-catch{
+          halt{
+            dialog("FA 컵, EFL 컵은 리그가 아니여서 순위표가 없습니다. 시즌 검색을 통하여 경기를 확인하세요.")
+          }
+        }
+      }
+      error (WrongLeagueName){
+        on-catch{
+          halt{
+            dialog("리그 이름을 다시 확인해주세요.")
+          }
+        }
+      }
+      error (WrongYear){
+        on-catch{
+          halt{
+            dialog("년도를 다시 확인해주세요.")
+          }
+        }
+      }
+      error (soccerSeasonError){
+        on-catch{
+          halt{
+            dialog("시즌 입력이 잘못되었습니다. 이렇게 말해보세요. 2018 2019 시즌 프리미어리그 순위표 알려줘.")
+          }
+        }
+      }
+      error (BaseBallSeasonError){
+        on-catch{
+          halt{
+            dialog("시즌 입력이 잘못되었습니다. 이렇게 말해보세요. 2018 시즌 메이저리그 순위표 알려줘.")
+          }
+        }
+      }
+    }
+  }
+}

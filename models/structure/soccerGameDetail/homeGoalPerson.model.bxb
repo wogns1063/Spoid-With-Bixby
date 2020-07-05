@@ -1,0 +1,19 @@
+structure (homeGoalPerson) {
+  description (홈팀에서 골을 넣은 사람)
+  property (ScoredPlayerName) {
+    type (scoredPlayerName)
+    min (Optional) max (One)
+  }
+  property (ScoredTime) {
+    type (scoredTime)
+    min (Optional) max (One)
+  }
+  property (Period) {
+    type (period)
+    min (Optional) max (One)
+  }
+  property (GoalType) {
+    type (goalType)
+    min (Optional) max (One)
+  }
+}

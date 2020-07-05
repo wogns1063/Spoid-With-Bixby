@@ -1,0 +1,40 @@
+train (t-b23t3ezj7u2apu9wj278jvjrm) {
+  utterance ("[g:jaehoon.epl.getTeamNameDateTimeExpression] (이번 주)[v:viv.time.DateTimeExpression] (레버쿠젠)[v:jaehoon.epl.soccerTeamName:레버쿠젠] 경기 보여줘")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591248507206)
+}
+train (t-b3pxb1psm01xobj1d1yzcijzs) {
+  utterance ("[g:jaehoon.epl.getTeamNameDateTimeExpression] (어제)[v:viv.time.DateTimeExpression] (릴)[v:jaehoon.epl.soccerTeamName:릴] 경기 결과 궁금해")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591605056059)
+}
+train (t-b3zyds0dve9qpk2u8qt0y6p0j) {
+  utterance ("[g:jaehoon.epl.getPitcherBatRank] (19)[v:jaehoon.epl.seasonOneDepth:19] 시즌 (메이저리그)[v:jaehoon.epl.leagueName:메이저리그] (타자)[v:jaehoon.epl.position:타자] 순위표 알려줘")
+  plan (Y2BlkMlKTM3Iz8/TSy3I0SvILEnOSC1ySizxLy0JKC1hkEWWTU8tCYArCErMy2YQQ5bOSU1ML031S8xNZRBBMTS/OLMkMz+PQQpZtDg1sTg/zz8v1SW1oCSDgYWBkYGJgRlIMwBZEAgDSHIA)
+  last-modified (1591252448361)
+}
+train (t-b9cfilzub5ufx95cili71mq85) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (2019)[v:jaehoon.epl.fromYear:2019]년 (8)[v:jaehoon.epl.fromMonth:8]월부터 (11)[v:jaehoon.epl.toMonth:11]월 (18)[v:toDay]일까지 (에레디비 시)[v:jaehoon.epl.leagueName:에레디비시] 경기 알려줘")
+  plan (Y2BnEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBFlkorys/1zc8ryWAQQReOTE0sYhBDFs1BGCKILF6S75JYySCMKgQxlY2BkYGJgZmBhYEVyGYA8hAQGaCpAwA=)
+  last-modified (1591197889708)
+}
+train (t-bc8hlff5d1d3zc3mngw8xchpa) {
+  utterance ("[g:jaehoon.epl.getPitcherBatRank] (15)[v:jaehoon.epl.seasonOneDepth:15] 시즌 (NPB)[v:jaehoon.epl.leagueName:일본프로야구] (투수)[v:jaehoon.epl.position:투수] 순위표 알려줘")
+  plan (Y2BlkMlKTM3Iz8/TSy3I0SvILEnOSC1ySizxLy0JKC1hkEWWTU8tCYArCErMy2YQQ5bOSU1ML031S8xNZRBBMTS/OLMkMz+PQQpZtDg1sTg/zz8v1SW1oCSDgYWBkYGJgRlIMwBZEAgDSHIA)
+  last-modified (1591296987659)
+}
+train (t-bedsfkijr4yz2khwhfyzb0wcg) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (2019)[v:jaehoon.epl.fromYear:2019]년 (8)[v:jaehoon.epl.fromMonth:8]월부터 (2020)[v:jaehoon.epl.toYear:2020]년 (3)[v:jaehoon.epl.toMonth:3]월까지 (일본프로야구)[v:jaehoon.epl.leagueName:일본프로야구] (세이부)[v:jaehoon.epl.baseballTeamName:세이부] 경기 알려줘")
+  plan (ZY3LDoJQDETHt2t8JCZ8A1+CxoUblyUZIeZeaqD3/yW4sGi7mnOaKbbInsJGtS34CoUmuybDybOaVlLqxItEIveqkp6VhHCjxNEevH10Gs/aWoP9L75TOhw9Dd8XO89NPxXZFI4FG8wwxwJLrLAeEobsdzp/128=)
+  last-modified (1591290687968)
+}
+train (t-bme7t4vu9pyedbcdkdf6bcz25) {
+  utterance ("[g:getLeagueNameSeason] (13)[v:jaehoon.epl.seasonOneDepth:13] 시즌 (피츠버그)[v:jaehoon.epl.baseballTeamName:피츠버그] 경기 보여줄래")
+  plan (TUvZCYAwFIvHBH6K4AZO4aeooAs8IShSW6Ht/rYK0gQSyIES1Sk8jNEdb9UZ72bv0KbZTjdQds9RLi4UazSadLCJ5SZKrZQrblCnrX0fk2bP2x0okCEPiuCRH/70AQ==)
+  last-modified (1591294012742)
+}
+train (t-byvawtbwugao9ocbp2bmbl9kd) {
+  utterance ("[g:getLeagueNameDateTimeExpression] (저 저번 주)[v:time.DateTimeExpression] (리그 앙)[v:leagueName:'리그 원'] 경기 보여줘")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPYxBDVpwDV8kgXZZZplcCVKuHRRMzAyMDE5BkANIgCAFwUQA=)
+  last-modified (1591245197192)
+}

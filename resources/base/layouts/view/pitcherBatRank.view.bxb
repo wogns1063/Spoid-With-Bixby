@@ -1,0 +1,180 @@
+result-view {
+  //  Action에 Output Name  (binding Name)
+  match: pitcherBatOutPut (pitcherBatOutPut) {
+    from-output : getPitcherBatRank
+    min (Required)
+    max (Many)
+  }
+  message{
+    template ("#{value(pitcherBatOutPut[0].Dialog)}")
+  }
+  
+  render {
+    layout{
+      section{
+        content{
+          for-each (pitcherBatOutPut){
+            as (pitcherBatOutPut){
+              if(exists(pitcherBatOutPut.SubLeagueName)){
+                hbox{
+                  content{
+                    vbox{
+                    }
+                  }
+                }
+                spacer
+                single-line{
+                  text{
+                    value("[#{value(pitcherBatOutPut.SubLeagueName)}]")
+                    style(Title_L)
+                    color (Amber)
+                  }
+                }
+              }
+              if(exists(pitcherBatOutPut.Subject)){
+                divider
+                hbox{
+                  content{
+                    vbox{
+                      grow(1)
+                    }
+                    vbox{
+                      valign (Middle)
+                      halign (Center)
+                      grow(1)
+                      content{
+                        single-line{
+                          text{
+                            value("[#{value(pitcherBatOutPut.Subject)}]")
+                            style(Title_L)
+                          }
+                        }
+                      } 
+                    }
+                    vbox{
+                      grow(1)
+                    }
+                  }
+                }
+                spacer
+                hbox{
+                  content{
+                    vbox{
+                      grow(1)
+                    }
+                    vbox{
+                      valign (Middle)
+                      halign (Center)
+                      grow(1)
+                      content{
+                        single-line{
+                          image{
+                            url("[#{value(pitcherBatOutPut.PlayerImg)}]")
+                            shape(Circle)
+                            style(Title_XXL)
+                          }
+                          spacer
+                          image{
+                            url("[#{value(pitcherBatOutPut.TeamImageUrl)}]")
+                            shape(Circle)
+                            style(Title_L)
+                          }
+                        }                        
+                      }
+                    }
+                    vbox{
+                      grow(1)
+                    }
+                  }
+                }
+                spacer
+              }
+              hbox{
+                content{
+                  vbox{
+                    grow(1)
+                    valign (Bottom)
+                    content{
+                      if(pitcherBatOutPut.Rank == '1'){
+                        single-line{
+                          text{
+                            value("1")
+                            style(Detail_M)
+                          }                        
+                        }
+                      }else{
+                        text{
+                          value("[#{value(pitcherBatOutPut.Rank)}]")
+                          style(Detail_M)
+                        }
+                      }
+                    }
+                  }
+                  vbox{
+                    grow(5)
+                    halign (Start)
+                    valign (Bottom)
+                    content{
+                      if(pitcherBatOutPut.Rank == '1'){
+                        single-line{
+                          text{
+                            value("[#{value(pitcherBatOutPut.PlayerName)}] ([#{value(pitcherBatOutPut.PlayerTeam)}])")
+                            style(Detail_M)
+                          }
+                        }
+                      }else{
+                        text{
+                          value("[#{value(pitcherBatOutPut.PlayerName)}] ([#{value(pitcherBatOutPut.PlayerTeam)}])")
+                          style(Detail_M)
+                        }                        
+                      }
+                    }
+                  }
+                  vbox{
+                    grow(3)
+                    content{
+                      if(pitcherBatOutPut.Rank == '1'){
+                        single-line{
+                          text{
+                            value("[#{value(pitcherBatOutPut.Stat)}]")
+                            style(Title_M)
+                            color (Blue)
+                          }
+                        }   
+                      }else{
+                        text{
+                          value("[#{value(pitcherBatOutPut.Stat)}]")
+                          style(Detail_M)
+                        }                      
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  conversation-drivers{
+    if (pitcherBatOutPut[0].Category  == '야구'){
+      conversation-driver{
+        template ("타자 순위표 알려줘")
+      }
+      conversation-driver{
+          template ("투수 순위표 알려줘")
+      }
+      conversation-driver{
+          template ("순위표 알려줘")
+      }  
+    }else-if (pitcherBatOutPut[0].Category  == '축구'){
+      conversation-driver{
+          template ("순위표 알려줘")
+      }      
+    }
+  }
+}
+
+

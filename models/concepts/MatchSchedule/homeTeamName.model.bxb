@@ -1,0 +1,3 @@
+text (homeTeamName) {
+  description (homeTeam 이름)
+}

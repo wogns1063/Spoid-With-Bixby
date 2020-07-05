@@ -1,0 +1,5 @@
+train (t-sh9cbat2e7zl6c7up5xcxvntq) {
+  utterance ("[g:jaehoon.epl.getTeamName] (2019)[v:jaehoon.epl.fromYear:2019]년 (8)[v:jaehoon.epl.fromMonth:8]월부터 (2020)[v:jaehoon.epl.toYear:2020]년 (3)[v:jaehoon.epl.toMonth:3]월 (1)[v:jaehoon.epl.toDay:1]일까지 (데포르티보 알라베스)[v:jaehoon.epl.soccerTeamName:'데포르티보 알라베스'] 경기 결과 알고싶어")
+  plan (Y+BgkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgEEEXjkxNLGKQQhYtzk9OTi2CGySILFeS75JYySCMKgQxWQhVEGwuOwMjAxMDMwMLAysDG5DHAOQjQ1SAoRoA)
+  last-modified (1591202247644)
+}

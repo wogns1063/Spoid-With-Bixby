@@ -1,0 +1,75 @@
+action (getLeagueRank2) {
+  type(Search)
+  description (챔피언스리그 및 유로파리그 순위표 (32강, 16강, 8강, 4강, 결승을 나타냄))
+  collect {
+    input (LeagueName) {
+        type (leagueName)
+        min (Optional) max (One)
+    }
+    input (Round) {
+        type (round)
+        min (Optional) max (One)
+    }
+    input (SeasonOneDepth) {
+        type (seasonOneDepth)
+        min (Optional) max (One)
+    }
+    input (SeasonTwoDepth) {
+        type (seasonTwoDepth)
+        min (Optional) max (One)
+    }
+  }
+  output (rankOutPut2){
+    on-empty{
+      halt{
+        dialog{
+          template ("경기 일정이 아직 없습니다.")
+        }
+      }
+    }
+    throws{
+      error (LongTearm){
+        on-catch{
+          halt{
+            dialog("한 시즌씩 검색할 수 있습니다. 다시 설정해 주세요.")
+          }
+        }
+      }
+      error (WrongLeagueName){
+        on-catch{
+          halt{
+            dialog("리그 이름을 다시 확인해주세요.")
+          }
+        }
+      }
+      error (notSupportBaseball){
+        on-catch{
+          halt{
+            dialog("야구에는 32강, 16강, 8강 등이 없습니다.")
+          }
+        }
+      }
+      error (WrongLeagueName2){
+        on-catch{
+          halt{
+            dialog("리그 이름을 다시 확인해주세요. 유로파리그, 챔피언스리그만 32강, 16강, 8강 등이 있습니다.")
+          }
+        }
+      }
+      error (WrongYear){
+        on-catch{
+          halt{
+            dialog("년도를 다시 확인해주세요.")
+          }
+        }
+      }
+      error (empty){
+        on-catch{
+          halt{
+            dialog("경기 스케줄이 아직 없습니다.")
+          }
+        }
+      }
+    }    
+  }
+}

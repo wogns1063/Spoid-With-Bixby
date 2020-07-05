@@ -1,0 +1,53 @@
+result-view {
+  //  Action에 Output Name  (binding Name)
+  match: LeagueOutPut (LeagueOutPut) {
+    from-output : getTeamName
+    min (Required)
+    max (Many)
+  }
+  message("리그를 선택해주세요.")
+  
+  render {
+    layout{
+      section{
+        content{
+          for-each (LeagueOutPut){
+            as (LeagueOutPut){
+              compound-card{
+                content{
+                  hbox{
+                    content{
+                      vbox{
+                        content{
+                          single-line{
+                            text{
+                              value("[#{value(LeagueOutPut.LeagueName)}]")
+                              style(Detail_L)
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                on-click{
+                  intent{
+                    goal : getLeagueName
+                    value : $expr(LeagueOutPut.LeagueName) 
+                    value : $expr(LeagueOutPut.FromYear) 
+                    value : $expr(LeagueOutPut.FromMonth) 
+                    value : $expr(LeagueOutPut.FromDay) 
+                    value : $expr(LeagueOutPut.ToYear) 
+                    value : $expr(LeagueOutPut.ToMonth) 
+                    value : $expr(LeagueOutPut.ToDay) 
+                    value : $expr(LeagueOutPut.SoccerTeamName) 
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+}

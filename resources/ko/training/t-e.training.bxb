@@ -1,0 +1,10 @@
+train (t-edayku5egsegk75irsjq1c0t4) {
+  utterance ("[g:getLeagueName] (8)[v:fromMonth:8]월부터 (3)[v:toMonth:3]월까지 (미네소타)[v:baseballTeamName:미네소타] 경기 보여줘")
+  plan (TYlLDkBAEETL7wLEQuIMToJYuEBLGpEZLfTcnxBJVy2q8h4y5BvxKrI3fLhGgg5BUVm2sLZMS+CePKO2aqKLJ3JuZPKvLa2dT/Gd7LqisFjlgykixEiexfO+/jHuBg==)
+  last-modified (1591292629040)
+}
+train (t-eyb65bp3agbix23mlv9cw2qpv) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (8)[v:jaehoon.epl.fromMonth:8]월 (1)[v:jaehoon.epl.fromDay:1]일부터 (3)[v:jaehoon.epl.toMonth:3]월 (1)[v:jaehoon.epl.toDay:1]일까지 (NPB)[v:jaehoon.epl.leagueName:일본프로야구] 경기 보여줘")
+  plan (XYxNDkBQDITH/xohcQmnsERc4S2KCCrSt3B7xEJpN52vM4MIyWRoZF5L2uaSrXRWUGg2kNRkBkutWQipfvU7L5U5kP1hw6uMyDWe345Yc+G7If2iJx/CgQsPPoLrxqXe1fPznQ==)
+  last-modified (1591200117606)
+}

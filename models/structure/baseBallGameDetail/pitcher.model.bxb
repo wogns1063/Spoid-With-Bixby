@@ -1,0 +1,55 @@
+structure (pitcher) {
+  description (__DESCRIPTION__)
+  property (PitIp) {
+    type (pitIp)
+    min (Optional) max (One)
+  }
+  property (PitNp) {
+    type (pitNp)
+    min (Optional) max (One)
+  }
+  property (PitH) {
+    type (pitH )
+    min (Optional) max (One)
+  }
+  property (PitSo) {
+    type (pitSo)
+    min (Optional) max (One)
+  }
+  property (PitBbhp) {
+    type (pitBbhp )
+    min (Optional) max (One)
+  }
+  property (PitHr) {
+    type (pitHr)
+    min (Optional) max (One)
+  }
+  property (PitR) {
+    type (pitR)
+    min (Optional) max (One)
+  }
+  property (PitEr) {
+    type (pitEr)
+    min (Optional) max (One)
+  }
+  property (PitEra) {
+    type (pitEra)
+    min (Optional) max (One)
+  }
+  property (PitWhip) {
+    type (pitWhip)
+    min (Optional) max (One)
+  }
+  property (PositionName) {
+    type (positionName)
+    min (Optional) max (One)
+  }
+  property (PlayerName) {
+    type (playerName)
+    min (Optional) max (One)
+  }
+  property (PlayerImg) {
+    type (playerImg)
+    min (Optional) max (One)
+  }
+}

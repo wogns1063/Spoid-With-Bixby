@@ -1,0 +1,30 @@
+train (t-q3bhptsgo0voyzzheckuv23jr) {
+  utterance ("[g:jaehoon.epl.getTeamName] (12)[v:jaehoon.epl.fromDay:12]일 (바이에른 뮌헨)[v:jaehoon.epl.soccerTeamName:'바이에른 뮌헨'] 경기 알려줘")
+  plan (Y2BhkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRpZIK8rPdUmsZJBCFizOT05OLYJrYGZgZGACkgxAGgQhAC4KAA==)
+  last-modified (1591201923927)
+}
+train (t-q7hnarruz8f633nz04lrlmamj) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (18)[v:jaehoon.epl.fromYear:18]년 (8)[v:jaehoon.epl.fromMonth:8]월 (1)[v:jaehoon.epl.fromDay:1]일부터 (11)[v:jaehoon.epl.toMonth:11]월까지 (라리가)[v:jaehoon.epl.leagueName:라리가] 경기 결과 궁금해")
+  plan (Y2BnEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBGlkorys91SaxkEEUX9M3PK8lgEEEXjkxNLGIQQxbNwWFyST7ECDYGRgYmBmYGFgZWIJsByENAZICmDgA=)
+  last-modified (1591200235731)
+}
+train (t-q8qk572ztxnow5ea6159e61ej) {
+  utterance ("[g:jaehoon.epl.getTeamNameSeason] (2019)[v:jaehoon.epl.seasonOneDepth:2019] (2020)[v:jaehoon.epl.seasonTwoDepth:2020] 시즌 (스팔 2013)[v:jaehoon.epl.soccerTeamName:'스팔 2013'] 경기 일정 알고 싶어")
+  plan (Y2BlkMtKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLQlOTSzOz2OQRZZPTy0JSU3M9UvMTYVKSyFLF4PF/PNSXVILSjKwyYWU52OTy09OTi2CmczAwsDIwMTADKQZgCwIhAEkOQA=)
+  last-modified (1591604942011)
+}
+train (t-q9nihhzml4kmqdxpbrcxsbrzu) {
+  utterance ("[g:getTeamNameSeason] (2016)[v:jaehoon.epl.seasonOneDepth:2016] (2017)[v:jaehoon.epl.seasonTwoDepth:2017] 시즌 (나폴리)[v:jaehoon.epl.soccerTeamName:나폴리] 경기 보여줘")
+  plan (Y2BlkMtKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLQlOTSzOz2OQRZZPTy0JSU3M9UvMTYVKSyFLF4PF/PNSXVILSjKwyYWU52OTy09OTi2CmczAwsDIwMTADKQZgCwIhAEkOQA=)
+  last-modified (1591242126924)
+}
+train (t-qb1t0i47yhsxjupcqfyv29qmp) {
+  utterance ("[g:jaehoon.epl.getLeagueRank] (15)[v:jaehoon.epl.seasonOneDepth:15] (16)[v:jaehoon.epl.seasonTwoDepth:16] 시즌 (에레디비 시)[v:jaehoon.epl.leagueName:에레디비시] 순위표 궁금해염")
+  plan (Y2BlEMtKTM3Iz8/TSy3I0StKzMv2Ly0JKC1hkEQWT08t8UlNTC9NDQIqQNWSAxb3S8xNZZBCFi9OTSzOz/PPS3VJLSjJwCYXUp4PkWNhYGRgYmAG0gxAFgTCAJIcAA==)
+  last-modified (1591614240585)
+}
+train (t-qygknb52751rmzff20wg7i2kw) {
+  utterance ("[g:jaehoon.epl.getTeamName] (8)[v:jaehoon.epl.fromMonth:8]월부터 (3)[v:jaehoon.epl.toMonth:3]월 (1)[v:jaehoon.epl.toDay:1]일까지 (스타드 브레스트 29)[v:jaehoon.epl.soccerTeamName:'스타드 브레스트 29'] 경기 보여줘")
+  plan (Y2BjkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRZZIK8rP9c3PK8lgkEIWLs5PTk4tgmsRRJYryXdJrGQQRhWCmMHKwMjAxMDMwAJkMQDZMIgAKCoA)
+  last-modified (1591202617155)
+}

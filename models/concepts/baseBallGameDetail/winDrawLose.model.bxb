@@ -1,0 +1,3 @@
+text (winDrawLose) {
+  description (승, 무승부, 패)
+}

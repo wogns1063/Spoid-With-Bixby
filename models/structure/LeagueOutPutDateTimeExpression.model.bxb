@@ -1,0 +1,15 @@
+structure (LeagueOutPutDateTimeExpression) {
+  description (__DESCRIPTION__)
+  property (dateTimeExpression) {
+    type (time.DateTimeExpression)
+    min (Optional) max (Many)
+  }
+  property (LeagueName) {
+    type (leagueName)
+    min (Optional) max (Many)
+  }
+  property (SoccerTeamName) {
+    type (soccerTeamName)
+    min (Optional) max (Many)
+  }
+}

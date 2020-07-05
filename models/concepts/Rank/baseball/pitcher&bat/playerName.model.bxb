@@ -1,0 +1,3 @@
+text (playerName) {
+  description (선수이름)
+}

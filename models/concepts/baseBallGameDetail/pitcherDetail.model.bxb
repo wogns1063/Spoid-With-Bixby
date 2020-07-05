@@ -1,0 +1,7 @@
+structure (pitcherDetail) {
+  description (__DESCRIPTION__)
+  property (pitcher) {
+    type (core.BaseImage)
+    min (Optional) max (Many)
+  }
+}

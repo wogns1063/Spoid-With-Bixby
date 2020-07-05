@@ -1,0 +1,3 @@
+text (subLeagueName) {
+  description (MLB 안에 아메리칸 리그, 내셔널 리그등을 나타냄)
+}

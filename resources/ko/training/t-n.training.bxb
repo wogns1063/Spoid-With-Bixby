@@ -1,0 +1,25 @@
+train (t-n1ptf8sla77wi795vqn0vpyaz) {
+  utterance ("[g:jaehoon.epl.getLeagueNameDateTimeExpression] (다음 주)[v:viv.time.DateTimeExpression] (세리에 A)[v:jaehoon.epl.leagueName:'세리에 A'] (삼프도리아)[v:jaehoon.epl.soccerTeamName:삼프도리아] 경기 일정 알려줘")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPYxBDVpwDV8kghSxenJ+cnFoUkpqYC5aTLsss0ysBmqOHxUAWBkYGJgZmIM0AZEEgDCDJAQA=)
+  last-modified (1591604752730)
+}
+train (t-n689y55epya2t3kbr1w1xmvlf) {
+  utterance ("[g:getLeagueName] (5)[v:fromMonth]월 (휴스턴)[v:baseballTeamName:휴스턴] 경기 일정 알려줘")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZZBBlkpKLE5NSszJCUlNzAXLiiLLphXl5/rm55VkMDAzMDIwAUkGIA2CEAAXBQA=)
+  last-modified (1591292582694)
+}
+train (t-nb5g8pc2ljamvisr8tn6m1goy) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (8)[v:jaehoon.epl.fromMonth:8]월부터 (3)[v:jaehoon.epl.toMonth:3]월 (1)[v:jaehoon.epl.toDay:1]일까지 (야쿠르트)[v:baseballTeamName:야쿠르트] 경기 보여줘")
+  plan (Y2BjEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZZBBlkpKLE5NSszJCUlNzAXLiiLLphXl5/rm55VkMAgiC5fkuyRWMgijCkHUsTIwMjAxMDOwAFkMQDYMIgCKCgA=)
+  last-modified (1591292677510)
+}
+train (t-nfb298ldhdfl481ngtxnbaurx) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (18)[v:jaehoon.epl.fromYear:18]년 (8)[v:jaehoon.epl.fromMonth:8]월부터 (11)[v:jaehoon.epl.toMonth:11]월 (3)[v:jaehoon.epl.toDay:3]일까지 (유로파리그)[v:jaehoon.epl.leagueName:유로파리그] 경기 결과 보고싶어")
+  plan (Y2BnEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBFlkorys/1zc8ryWAQQReOTE0sYhBDFs1BGCKILF6S75JYySCMKgQxlY2BkYGJgZmBhYEVyGYA8hAQGaCpAwA=)
+  last-modified (1591200463368)
+}
+train (t-ni4illa2c2rd4ii690zi2xfjs) {
+  utterance ("[g:jaehoon.epl.getPitcherBatRank] (2020)[v:jaehoon.epl.seasonOneDepth:2020] 시즌 (메이저리그)[v:jaehoon.epl.leagueName:메이저리그] (투수)[v:jaehoon.epl.position:투수] 순위표 알려줘")
+  plan (Y2BlkMlKTM3Iz8/TSy3I0SvILEnOSC1ySizxLy0JKC1hkEWWTU8tCYArCErMy2YQQ5bOSU1ML031S8xNZRBBMTS/OLMkMz+PQQpZtDg1sTg/zz8v1SW1oCSDgYWBkYGJgRlIMwBZEAgDSHIA)
+  last-modified (1591252474981)
+}

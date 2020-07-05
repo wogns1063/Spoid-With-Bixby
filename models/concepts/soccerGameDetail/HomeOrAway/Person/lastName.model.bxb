@@ -1,0 +1,3 @@
+text (lastName) {
+  description (소속 팀 선수 이름)
+}

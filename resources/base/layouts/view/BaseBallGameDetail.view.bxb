@@ -1,0 +1,2037 @@
+result-view {
+  //  Action에 Output Name  (binding Name)
+  match: baseBallGameDetail (baseBallGameDetail) {
+    from-output : getBaseBallDetail
+    min (Required)
+    max (Many)
+  }
+  message{
+    template ("#{value(baseBallGameDetail.BaseBallSummary.AwayTeamName)} VS #{value(baseBallGameDetail.BaseBallSummary.HomeTeamName)} 경기 결과입니다.")
+  }
+  
+  render {
+    layout{
+      section{
+        content{              
+          hbox{
+            content{
+              vbox{
+                content{
+                  single-line{
+                    text{
+                      value("#{value(baseBallGameDetail.BaseBallSummary.MatchDate)} #{value(baseBallGameDetail.BaseBallSummary.MatchTime)}")
+                      style(Detail_M)
+                    }
+                    spacer
+                    if(exists(baseBallGameDetail.BaseBallSummary.GameRound)){
+                        text{
+                          value("<#{value(baseBallGameDetail.BaseBallSummary.GameRound)}>")
+                          style(Detail_M)  
+                        }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          divider
+          hbox{
+            content{
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  single-line{
+                    image{
+                      url("#{value(baseBallGameDetail.BaseBallSummary.AwayTeamImageUrl)}")
+                      shape (Circle)
+                      style(Title_XXL)
+                    }
+                  }
+                  single-line{
+                    text{
+                      value("#{value(baseBallGameDetail.BaseBallSummary.AwayTeamName)}")
+                      style(Detail_L)
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.WinDrawLose) && exists(baseBallGameDetail.AwayTeam.TeamRank)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.WinDrawLose)}")
+                        style(Legal)
+                      }
+                    }
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.TeamRank)}")
+                        style(Legal)
+                      }
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(2)
+                halign (Center)
+                content{
+                  single-line{
+                    text{
+                      value("#{value(baseBallGameDetail.BaseBallSummary.AwayScore)}")
+                      style(Title_XL)
+                    }
+                    spacer
+                    text{
+                      value(" : ")
+                      style(Title_XL)
+                    }
+                    spacer
+                    text{
+                      value("#{value(baseBallGameDetail.BaseBallSummary.HomeScore)}")
+                      style(Title_XL)
+                    }
+                  }
+                  if (exists(baseBallGameDetail.BaseBallSummary.Check)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.BaseBallSummary.GameStatus)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }else{
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.BaseBallSummary.GameStatus)}")
+                        style(Legal)
+                      }
+                    }
+                  }
+                  single-line{
+                    text{
+                      value("#{value(baseBallGameDetail.BaseBallSummary.FieldName)}")
+                      style(Legal)
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  single-line{
+                    image{
+                      url("#{value(baseBallGameDetail.BaseBallSummary.HomeTeamImageUrl)}")
+                      shape (Circle)
+                      style(Title_XXL)
+                    }
+                  }
+                  single-line{
+                    text{
+                      value("#{value(baseBallGameDetail.BaseBallSummary.HomeTeamName)}")
+                      style(Detail_L)
+                    }
+                  }
+                  if(exists(baseBallGameDetail.HomeTeam.WinDrawLose) && exists(baseBallGameDetail.HomeTeam.TeamRank)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.WinDrawLose)}")
+                        style(Legal)
+                      }
+                    }
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.TeamRank)}")
+                        style(Legal)
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          divider
+
+          hbox{
+            content{
+              vbox{
+                grow(4)
+                halign (Center)
+                content{
+                  single-line{
+                    text{
+                      value("팀")
+                      style(Detail_M_Soft)
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.TeamName)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.TeamName)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.TeamName)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.TeamName)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.Score[0].Check)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[0].Check)}")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.Score[0].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.Score[0].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  } 
+                  if(exists(baseBallGameDetail.HomeTeam.Score[0].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[0].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.Score[1].Check)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[1].Check)}")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.Score[1].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.Score[1].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                  if(exists(baseBallGameDetail.HomeTeam.Score[1].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[1].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.Score[2].Check)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[2].Check)}")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.Score[2].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.Score[2].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                  if(exists(baseBallGameDetail.HomeTeam.Score[2].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[2].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.Score[3].Check)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[3].Check)}")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.Score[3].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.Score[3].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                  if(exists(baseBallGameDetail.HomeTeam.Score[3].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[3].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.Score[4].Check)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[4].Check)}")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.Score[4].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.Score[4].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                  if(exists(baseBallGameDetail.HomeTeam.Score[4].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[4].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.Score[5].Check)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[5].Check)}")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.Score[5].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.Score[5].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                  if(exists(baseBallGameDetail.HomeTeam.Score[5].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[5].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.Score[6].Check)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[6].Check)}")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.Score[6].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.Score[6].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                  if(exists(baseBallGameDetail.HomeTeam.Score[6].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[6].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.Score[7].Check)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[7].Check)}")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.Score[7].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.Score[7].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                  if(exists(baseBallGameDetail.HomeTeam.Score[7].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[7].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.Score[8].Check)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[8].Check)}")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                  }
+                  if(exists(baseBallGameDetail.AwayTeam.Score[8].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.Score[8].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                  if(exists(baseBallGameDetail.HomeTeam.Score[8].InningScore)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.Score[8].InningScore)}")
+                        style(Detail_M)
+                      }                    
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          spacer
+          if(exists(baseBallGameDetail.HomeTeam.Score[9].Check)){
+            hbox{
+              content{
+                vbox{
+                  grow(4)
+                  halign (Center)
+                  content{
+                    single-line{
+                      text{
+                        value("팀")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.TeamName)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.TeamName)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                    if (exists(baseBallGameDetail.HomeTeam.TeamName)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.TeamName)}")
+                          style(Detail_M)
+                        }
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[9].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[9].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[9].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[9].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[9].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[9].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[10].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[10].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[10].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[10].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[10].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[10].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[11].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[11].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[11].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[11].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[11].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[11].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[12].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[12].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[12].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[12].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[12].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[12].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[13].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[13].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[13].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[13].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[13].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[13].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[14].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[14].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[14].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[14].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[14].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[14].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[15].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[15].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[15].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[15].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[15].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[15].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[16].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[16].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[16].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[16].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[16].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[16].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[17].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[17].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[17].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[17].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[17].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[17].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+              }
+            }            
+          }
+          spacer
+          if(exists(baseBallGameDetail.HomeTeam.Score[18].Check)){
+            hbox{
+              content{
+                vbox{
+                  grow(4)
+                  halign (Center)
+                  content{
+                    single-line{
+                      text{
+                        value("팀")
+                        style(Detail_M_Soft)
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.TeamName)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.TeamName)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                    if (exists(baseBallGameDetail.HomeTeam.TeamName)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.TeamName)}")
+                          style(Detail_M)
+                        }
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[18].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[18].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[18].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[18].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[18].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[18].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[19].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[19].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[19].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[19].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[19].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[19].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[20].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[20].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[20].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[20].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[20].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[20].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[21].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[21].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[21].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[21].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[21].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[21].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[22].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[22].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[22].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[22].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[22].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[22].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[23].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[23].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[23].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[23].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[23].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[23].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[24].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[24].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[24].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[24].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[24].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[24].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[25].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[25].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[25].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[25].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[25].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[25].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+                vbox{
+                  grow(1)
+                  halign (Center)
+                  content{
+                    if(exists(baseBallGameDetail.HomeTeam.Score[26].Check)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[26].Check)}")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }else{
+                      single-line{
+                        text{
+                          value("　")
+                          style(Detail_M_Soft)
+                        }
+                      }
+                    }
+                    if(exists(baseBallGameDetail.AwayTeam.Score[26].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.AwayTeam.Score[26].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    } 
+                    if(exists(baseBallGameDetail.HomeTeam.Score[26].InningScore)){
+                      single-line{
+                        text{
+                          value("#{value(baseBallGameDetail.HomeTeam.Score[26].InningScore)}")
+                          style(Detail_M)
+                        }                    
+                      }
+                    }
+                  }
+                }
+              }
+            }            
+          }
+          divider
+          hbox{
+            content{
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.AwayTeam.StatDetail.BatH)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.StatDetail.BatH)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.AwayTeam.StatDetail.BatHr)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.StatDetail.BatHr)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.AwayTeam.StatDetail.BatAvg)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.StatDetail.BatAvg)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.AwayTeam.StatDetail.PitSo)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.StatDetail.PitSo)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.AwayTeam.StatDetail.BatSb)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.StatDetail.BatSb)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.AwayTeam.StatDetail.FldErr)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.StatDetail.FldErr)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.AwayTeam.StatDetail.BatGdp)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.StatDetail.BatGdp)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.AwayTeam.StatDetail.BatLob)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.StatDetail.BatLob)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.AwayTeam.StatDetail.BatBbhp)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.AwayTeam.StatDetail.BatBbhp)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.StatDetail.BatH)){
+                    single-line{
+                      text{
+                        value("안타")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatHr)){
+                    single-line{
+                      text{
+                        value("홈런")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatAvg)){
+                    single-line{
+                      text{
+                        value("타율")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.PitSo)){
+                    single-line{
+                      text{
+                        value("탈삼진")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatSb)){
+                    single-line{
+                      text{
+                        value("도루")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.FldErr)){
+                    single-line{
+                      text{
+                        value("실책")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatGdp)){
+                    single-line{
+                      text{
+                        value("병살")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatLob)){
+                    single-line{
+                      text{
+                        value("잔루")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatBbhp)){
+                    single-line{
+                      text{
+                        value("사사구")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                }
+              }
+              vbox{
+                grow(1)
+                halign (Center)
+                content{
+                  if(exists(baseBallGameDetail.HomeTeam.StatDetail.BatH)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.StatDetail.BatH)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatHr)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.StatDetail.BatHr)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatAvg)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.StatDetail.BatAvg)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.PitSo)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.StatDetail.PitSo)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatSb)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.StatDetail.BatSb)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.FldErr)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.StatDetail.FldErr)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatGdp)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.StatDetail.BatGdp)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatLob)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.StatDetail.BatLob)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                  if (exists(baseBallGameDetail.HomeTeam.StatDetail.BatBbhp)){
+                    single-line{
+                      text{
+                        value("#{value(baseBallGameDetail.HomeTeam.StatDetail.BatBbhp)}")
+                        style(Detail_M)
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          divider
+
+          if (exists(baseBallGameDetail.BaseBallSummary.HrBat)){
+            single-line{
+              text{
+                value("홈런")
+                style(Title_M)
+              }
+            }
+            image-carousel{
+              // object-position (Left)
+              object-fit (Contain)
+              // aspect-ratio (9:21)
+              images (baseBallGameDetail.BaseBallSummary.HrBat)
+            }
+          }
+          spacer
+          if (exists(baseBallGameDetail.BaseBallSummary.PitcherDetail.pitcher)){
+            single-line{
+              text{
+                value("투수")
+                style(Title_M)
+              }
+            }
+            image-carousel{
+              // object-position (Left)
+              object-fit (Contain)
+              // aspect-ratio (9:21)
+              images (baseBallGameDetail.BaseBallSummary.PitcherDetail.pitcher)
+            }
+          }
+          divider
+          compound-card{
+            content{
+              hbox{
+                content{
+                  vbox{
+                    grow(1)
+                    halign (Center)
+                    content{
+                      single-line{
+                        text("　")
+                      }
+                    }
+                  }
+                  vbox{
+                    grow(3)
+                    halign (Center)
+                    content{
+                      single-line{
+                        text{
+                          value("투수 기록 상세조회")
+                          style(Title_S)
+                        }
+                      }
+                    }
+                  }
+                  vbox{
+                    grow(1)
+                    halign (Center)
+                    content{
+                      single-line{
+                        text("　")
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            on-click{
+              intent{
+                goal : getPitcherDetail
+                value : $expr(baseBallGameDetail.BaseBallSummary.GameId)
+              }
+            }
+          }
+          compound-card{
+            content{
+              hbox{
+                content{
+                  vbox{
+                    grow(1)
+                    halign (Center)
+                    content{
+                      single-line{
+                        text("　")
+                      }
+                    }
+                  }
+                  vbox{
+                    grow(3)
+                    halign (Center)
+                    content{
+                      single-line{
+                        text{
+                          value("타자 기록 상세조회")
+                          style(Title_S)
+                        }
+                      }
+                    }
+                  }
+                  vbox{
+                    grow(1)
+                    halign (Center)
+                    content{
+                      single-line{
+                        text("　")
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            on-click{
+              intent{
+                goal : getBatDetail
+                value : $expr(baseBallGameDetail.BaseBallSummary.GameId)
+              }
+            }
+          }
+          if (exists(baseBallGameDetail.NextMatchHome) || exists(baseBallGameDetail.NextMatchAway)){
+            single-line{
+              text{
+                value("다음 경기 일정")
+                style(Title_M)
+              }
+            }
+
+            if (exists(baseBallGameDetail.NextMatchHome)){
+              if (exists(baseBallGameDetail.NextMatchHome.Check)){
+                compound-card{
+                  content{
+                    single-line{
+                      if(exists(baseBallGameDetail.NextMatchHome.MatchDate) && exists(baseBallGameDetail.NextMatchHome.MatchTime)){
+                        text{
+                          value("#{value(baseBallGameDetail.NextMatchHome.MatchDate)} #{value(baseBallGameDetail.NextMatchHome.MatchTime)}")
+                          style(Detail_M)
+                        }
+                      }
+                      spacer
+                      if(exists(baseBallGameDetail.NextMatchHome.GameRound)){
+                          text{
+                            value("<#{value(baseBallGameDetail.NextMatchHome.GameRound)}>")
+                            style(Detail_M)  
+                          }
+                      }
+                    }
+                    divider
+                    hbox{
+                      content{
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchHome.AwayTeamImageUrl)){
+                              single-line{
+                                image{
+                                  url("#{value(baseBallGameDetail.NextMatchHome.AwayTeamImageUrl)}")
+                                  shape (Circle)
+                                  style(Title_XXL)
+                                }
+                              }
+                            }
+                            if (exists(baseBallGameDetail.NextMatchHome.AwayTeamName)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.AwayTeamName)}")
+                                  style(Detail_L)
+                                }
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(2)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchHome.HomeScore) && exists(baseBallGameDetail.NextMatchHome.AwayScore)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.AwayScore)}")
+                                  style(Title_XL)
+                                }
+                                spacer
+                                text{
+                                  value(" : ")
+                                  style(Title_XL)
+                                }
+                                spacer
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.HomeScore)}")
+                                  style(Title_XL)
+                                }
+                              }
+                            }
+                            if (exists(baseBallGameDetail.NextMatchHome.GameStatus) && exists(baseBallGameDetail.NextMatchHome.FieldName)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.GameStatus)}")
+                                  style(Legal)
+                                }
+                              }
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.FieldName)}")
+                                  style(Legal)
+                                }
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchHome.HomeTeamImageUrl) && exists(baseBallGameDetail.NextMatchHome.HomeTeamName)){
+                              single-line{
+                                image{
+                                  url("#{value(baseBallGameDetail.NextMatchHome.HomeTeamImageUrl)}")
+                                  shape (Circle)
+                                  style(Title_XXL)
+                                }
+                              }
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.HomeTeamName)}")
+                                  style(Detail_L)
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  on-click{
+                    intent{
+                      goal : getBaseBallDetail
+                      value : $expr(baseBallGameDetail.NextMatchHome.GameId)
+                      value : $expr(baseBallGameDetail.NextMatchHome.Category)
+                    }
+                  }
+                }                  
+              }
+              else{
+                compound-card{
+                  content{
+                    single-line{
+                      if(exists(baseBallGameDetail.NextMatchHome.MatchDate) && exists(baseBallGameDetail.NextMatchHome.MatchTime)){
+                        text{
+                          value("#{value(baseBallGameDetail.NextMatchHome.MatchDate)} #{value(baseBallGameDetail.NextMatchHome.MatchTime)}")
+                          style(Detail_M)
+                        }
+                      }
+                      spacer
+                      if(exists(baseBallGameDetail.NextMatchHome.GameRound)){
+                          text{
+                            value("<#{value(baseBallGameDetail.NextMatchHome.GameRound)}>")
+                            style(Detail_M)  
+                          }
+                      }
+                    }
+                    divider
+                    hbox{
+                      content{
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchHome.AwayTeamImageUrl)){
+                              single-line{
+                                image{
+                                  url("#{value(baseBallGameDetail.NextMatchHome.AwayTeamImageUrl)}")
+                                  shape (Circle)
+                                  style(Title_XXL)
+                                }
+                              }
+                            }
+                            if (exists(baseBallGameDetail.NextMatchHome.AwayTeamName)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.AwayTeamName)}")
+                                  style(Detail_L)
+                                }
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(2)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchHome.HomeScore) && exists(baseBallGameDetail.NextMatchHome.AwayScore)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.AwayScore)}")
+                                  style(Title_XL)
+                                }
+                                spacer
+                                text{
+                                  value(" : ")
+                                  style(Title_XL)
+                                }
+                                spacer
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.HomeScore)}")
+                                  style(Title_XL)
+                                }
+                              }
+                            }
+                            if (exists(baseBallGameDetail.NextMatchHome.GameStatus) && exists(baseBallGameDetail.NextMatchHome.FieldName)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.GameStatus)}")
+                                  style(Legal)
+                                }
+                              }
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.FieldName)}")
+                                  style(Legal)
+                                }
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchHome.HomeTeamImageUrl) && exists(baseBallGameDetail.NextMatchHome.HomeTeamName)){
+                              single-line{
+                                image{
+                                  url("#{value(baseBallGameDetail.NextMatchHome.HomeTeamImageUrl)}")
+                                  shape (Circle)
+                                  style(Title_XXL)
+                                }
+                              }
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchHome.HomeTeamName)}")
+                                  style(Detail_L)
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }   
+              }          
+            }
+
+
+            if (exists(baseBallGameDetail.NextMatchAway)){
+              if (exists(baseBallGameDetail.NextMatchAway.Check)){
+                compound-card{
+                  content{
+                    single-line{
+                      if(exists(baseBallGameDetail.NextMatchAway.MatchDate) && exists(baseBallGameDetail.NextMatchAway.MatchTime)){
+                        text{
+                          value("#{value(baseBallGameDetail.NextMatchAway.MatchDate)} #{value(baseBallGameDetail.NextMatchAway.MatchTime)}")
+                          style(Detail_M)
+                        }
+                      }
+                      spacer
+                      if(exists(baseBallGameDetail.NextMatchAway.GameRound)){
+                          text{
+                            value("<#{value(baseBallGameDetail.NextMatchAway.GameRound)}>")
+                            style(Detail_M)  
+                          }
+                      }
+                    }
+                    divider
+                    hbox{
+                      content{
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchAway.AwayTeamImageUrl)){
+                              single-line{
+                                image{
+                                  url("#{value(baseBallGameDetail.NextMatchAway.AwayTeamImageUrl)}")
+                                  shape (Circle)
+                                  style(Title_XXL)
+                                }
+                              }
+                            }
+                            if (exists(baseBallGameDetail.NextMatchAway.AwayTeamName)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.AwayTeamName)}")
+                                  style(Detail_L)
+                                }
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(2)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchAway.HomeScore) && exists(baseBallGameDetail.NextMatchAway.AwayScore)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.AwayScore)}")
+                                  style(Title_XL)
+                                }
+                                spacer
+                                text{
+                                  value(" : ")
+                                  style(Title_XL)
+                                }
+                                spacer
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.HomeScore)}")
+                                  style(Title_XL)
+                                }
+                              }
+                            }
+                            if (exists(baseBallGameDetail.NextMatchAway.GameStatus) && exists(baseBallGameDetail.NextMatchAway.FieldName)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.GameStatus)}")
+                                  style(Legal)
+                                }
+                              }
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.FieldName)}")
+                                  style(Legal)
+                                }
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchAway.HomeTeamImageUrl) && exists(baseBallGameDetail.NextMatchAway.HomeTeamName)){
+                              single-line{
+                                image{
+                                  url("#{value(baseBallGameDetail.NextMatchAway.HomeTeamImageUrl)}")
+                                  shape (Circle)
+                                  style(Title_XXL)
+                                }
+                              }
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.HomeTeamName)}")
+                                  style(Detail_L)
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  on-click{
+                    intent{
+                      goal : getBaseBallDetail
+                      value : $expr(baseBallGameDetail.NextMatchAway.GameId)
+                      value : $expr(baseBallGameDetail.NextMatchAway.Category)
+                    }
+                  }
+                }                  
+              }
+              else{
+                compound-card{
+                  content{
+                    single-line{
+                      if(exists(baseBallGameDetail.NextMatchAway.MatchDate) && exists(baseBallGameDetail.NextMatchAway.MatchTime)){
+                        text{
+                          value("#{value(baseBallGameDetail.NextMatchAway.MatchDate)} #{value(baseBallGameDetail.NextMatchAway.MatchTime)}")
+                          style(Detail_M)
+                        }
+                      }
+                      spacer
+                      if(exists(baseBallGameDetail.NextMatchAway.GameRound)){
+                          text{
+                            value("<#{value(baseBallGameDetail.NextMatchAway.GameRound)}>")
+                            style(Detail_M)  
+                          }
+                      }
+                    }
+                    divider
+                    hbox{
+                      content{
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchAway.AwayTeamImageUrl)){
+                              single-line{
+                                image{
+                                  url("#{value(baseBallGameDetail.NextMatchAway.AwayTeamImageUrl)}")
+                                  shape (Circle)
+                                  style(Title_XXL)
+                                }
+                              }
+                            }
+                            if (exists(baseBallGameDetail.NextMatchAway.AwayTeamName)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.AwayTeamName)}")
+                                  style(Detail_L)
+                                }
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(2)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchAway.HomeScore) && exists(baseBallGameDetail.NextMatchAway.AwayScore)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.AwayScore)}")
+                                  style(Title_XL)
+                                }
+                                spacer
+                                text{
+                                  value(" : ")
+                                  style(Title_XL)
+                                }
+                                spacer
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.HomeScore)}")
+                                  style(Title_XL)
+                                }
+                              }
+                            }
+                            if (exists(baseBallGameDetail.NextMatchAway.GameStatus) && exists(baseBallGameDetail.NextMatchAway.FieldName)){
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.GameStatus)}")
+                                  style(Legal)
+                                }
+                              }
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.FieldName)}")
+                                  style(Legal)
+                                }
+                              }
+                            }
+                          }
+                        }
+                        vbox{
+                          grow(1)
+                          halign (Center)
+                          content{
+                            if (exists(baseBallGameDetail.NextMatchAway.HomeTeamImageUrl) && exists(baseBallGameDetail.NextMatchAway.HomeTeamName)){
+                              single-line{
+                                image{
+                                  url("#{value(baseBallGameDetail.NextMatchAway.HomeTeamImageUrl)}")
+                                  shape (Circle)
+                                  style(Title_XXL)
+                                }
+                              }
+                              single-line{
+                                text{
+                                  value("#{value(baseBallGameDetail.NextMatchAway.HomeTeamName)}")
+                                  style(Detail_L)
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }     
+              }
+            }
+          }    
+
+        }
+      }
+    }
+  }
+
+  conversation-drivers{
+    conversation-driver{
+      if (exists(baseBallGameDetail.BaseBallSummary.SeasonOneDepth) && exists(baseBallGameDetail.BaseBallSummary.EngLeagueName)){
+        template ("#{value(baseBallGameDetail.BaseBallSummary.SeasonOneDepth)} 시즌 #{value(baseBallGameDetail.BaseBallSummary.EngLeagueName)} 순위표 알려줘")
+      }
+    }
+    conversation-driver{
+      if (exists(baseBallGameDetail.BaseBallSummary.SeasonOneDepth) && exists(baseBallGameDetail.BaseBallSummary.EngLeagueName)){
+        template ("#{value(baseBallGameDetail.BaseBallSummary.SeasonOneDepth)} 시즌 #{value(baseBallGameDetail.BaseBallSummary.EngLeagueName)} 투수 순위표 알려줘")
+      }
+    }
+    conversation-driver{
+      if (exists(baseBallGameDetail.BaseBallSummary.SeasonOneDepth) && exists(baseBallGameDetail.BaseBallSummary.EngLeagueName)){
+        template ("#{value(baseBallGameDetail.BaseBallSummary.SeasonOneDepth)} 시즌 #{value(baseBallGameDetail.BaseBallSummary.EngLeagueName)} 타자 순위표 알려줘")
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,10 @@
+train (t-2aykbn1xbwqt7734obrx73idv) {
+  utterance ("[g:getTeamName] (18)[v:fromYear:18]년 (8)[v:fromMonth:8]월 (2)[v:fromDay:2]일부터 (11)[v:toMonth:11]월 (3)[v:toDay:3]일까지 (VVV 펜로)[v:soccerTeamName:'VVV 펜로'] 경기 일정 알려주실")
+  plan (Y+BgkMhKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLWEQR5ZJTy0JSU3M9UvMTWUQRpZIK8rPdUmsZBBFF/TNzyvJYBBBF45MTSxikEIWLc5PTk4tgpsuiCxXkg8yWxhVCGIyOwMjAxMDMwMLAysDG5DHAOQjQ1SAoRoA)
+  last-modified (1591246560892)
+}
+train (t-2q2bkp2swbl709r0umt8kh1nj) {
+  utterance ("[g:jaehoon.epl.getLeagueNameDateTimeExpression] (저 저번 주)[v:viv.time.DateTimeExpression] (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] (우니온 베를린)[v:jaehoon.epl.soccerTeamName:'우니온 베를린'] 경기 일정 보여줘")
+  plan (Y2BlEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPYxBDVpwDV8kghSxenJ+cnFoUkpqYC5aTLsss0ysBmqOHxUAWBkYGJgZmIM0AZEEgDCDJAQA=)
+  last-modified (1591247388652)
+}

@@ -1,0 +1,589 @@
+result-view {
+  //  Action에 Output Name  (binding Name)
+  match: rankOutPut (rankOutPut) {
+    from-output : getLeagueRank
+    min (Required)
+    max (Many)
+  }
+  message{
+    template ("#{value(rankOutPut[0].Name)} 순위표 입니다.")
+  }
+  
+   render {
+     if (rankOutPut[0].Category == '축구'){
+       layout{
+        section { 
+          content {
+            for-each (rankOutPut){
+              as (rankOutPut){
+                // 한 번만 출력하기 위해
+                if(exists(rankOutPut.Tmp)){
+                  if(exists(rankOutPut.Group)){
+                    // 챔피언스리그, 유로파리그 조를 나타내기 위해
+                    single-line{
+                      text{
+                        value("[#{value(rankOutPut.Group)}]")
+                        style(Title_S)
+                        color (Amber)
+                      }
+                    }
+                  }
+                  hbox{
+                    content{
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("순위")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(4)
+                        content{
+                          text{
+                            value("팀명")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("경기")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("승")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("무")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("패")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("승점")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                    }
+                  }
+                  divider
+                }
+                hbox{
+                  content{
+                    vbox{
+                      halign (Center)
+                      grow(1)
+                      content{
+                        text{
+                          value("[#{value(rankOutPut.Rank)}]")
+                          style(Detail_M)
+                        }
+                      }
+                    }
+                    vbox{
+                      halign (Start)
+                      grow(4)
+                      content{
+                        single-line{
+                          image{
+                            url("[#{value(rankOutPut.TeamImageUrl)}]")
+                            shape (Circle)
+                            style(Title_S)
+                          }
+                          spacer
+                          text{
+                            value("[#{value(rankOutPut.TeamName)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                    }
+                    vbox{
+                      halign (Center)
+                      grow(1)
+                      content{
+                        text{
+                          value("[#{value(rankOutPut.Game)}]")
+                          style(Detail_M)
+                        }
+                      }
+                    }
+                    vbox{
+                      halign (Center)
+                      grow(1)
+                      content{
+                        text{
+                          value("[#{value(rankOutPut.Win)}]")
+                          style(Detail_M)
+                        }
+                      }
+                    }
+                    vbox{
+                      halign (Center)
+                      grow(1)
+                      content{
+                        text{
+                          value("[#{value(rankOutPut.Draw)}]")
+                          style(Detail_M)
+                        }
+                      }
+                    }
+                    vbox{
+                      halign (Center)
+                      grow(1)
+                      content{
+                        text{
+                          value("[#{value(rankOutPut.Loss)}]")
+                          style(Detail_M)
+                        }
+                      }
+                    }
+                    vbox{
+                      halign (Center)
+                      grow(1)
+                      content{
+                        text{
+                          value("[#{value(rankOutPut.VictoryPoint)}]")
+                          style(Detail_M)
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }     
+          }
+        }
+       }
+    }
+    else-if (rankOutPut[0].Category == '야구'){
+      layout{
+        section { 
+          content{
+            for-each (rankOutPut){
+              as (rankOutPut){
+                if(rankOutPut[0].EngLeagueName == 'mlb'){
+                  // 메이저리그 일 경우
+                  if (exists(rankOutPut.SubLeagueName)){
+                    single-line{
+                      text{
+                        value("[#{value(rankOutPut.SubLeagueName)}] 종합 순위")
+                        style(Title_M)
+                        color (Amber)
+                      }
+                    }
+                  }
+                  if (exists(rankOutPut.Tmp)){
+                    single-line{
+                      text{
+                          value("[#{value(rankOutPut.District)}]")
+                          style(Title_S)
+                        }
+                    }
+                    hbox{
+                      content{
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("순위")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(3)
+                          content{
+                            text{
+                              value("팀")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("승")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("패")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("승률")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("GB")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                      }
+                    }
+                    divider
+                  }
+                  hbox{
+                    content{
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.Rank)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Start)
+                        grow(3)
+                        content{
+                          single-line{
+                            image{
+                              url("[#{value(rankOutPut.TeamImageUrl)}]")
+                              shape (Circle)
+                              style(Title_S)
+                            }
+                            spacer
+                            text{
+                              value("[#{value(rankOutPut.TeamName)}]")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.Win)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.Loss)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.WinRate)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.GB)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                    }
+                  }  
+                }else{
+                  // 일본야구 일 경우
+                  if (exists(rankOutPut.Tmp)){
+                    if (exists(rankOutPut.SubLeagueName)){
+                      single-line{
+                        text{
+                          value("[#{value(rankOutPut.SubLeagueName)}] 종합 순위")
+                          style(Title_S)
+                          color (Amber)
+                        }
+                      }
+                    }
+                    hbox{
+                      content{
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("순위")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(3)
+                          content{
+                            text{
+                              value("팀")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("승")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("무")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("패")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("승률")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                        vbox{
+                          halign (Center)
+                          grow(1)
+                          content{
+                            text{
+                              value("GB")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                      }
+                    }
+                    divider
+                  }
+                  hbox{
+                    content{
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.Rank)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Start)
+                        grow(3)
+                        content{
+                          single-line{
+                            image{
+                              url("[#{value(rankOutPut.TeamImageUrl)}]")
+                              shape (Circle)
+                              style(Title_S)
+                            }
+                            spacer
+                            text{
+                              value("[#{value(rankOutPut.TeamName)}]")
+                              style(Detail_M)
+                            }
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.Win)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.Draw)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.Loss)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.WinRate)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                      vbox{
+                        halign (Center)
+                        grow(1)
+                        content{
+                          text{
+                            value("[#{value(rankOutPut.GB)}]")
+                            style(Detail_M)
+                          }
+                        }
+                      }
+                    }
+                  }          
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  conversation-drivers{
+    if (rankOutPut[0].EngLeagueName == 'uefacup'){
+      // 유로파리그는 32강 ~ 결승까지
+      conversation-driver{
+        template ("32강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("16강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("8강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("4강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("결승 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("선수 순위표 알려줘")
+      }
+    }else-if (rankOutPut[0].EngLeagueName == 'uefacl'){
+      // 챔피언스리그는 16강 ~ 결승까지
+      conversation-driver{
+        template("16강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("8강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("4강 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("결승 대진표 알려줘")
+      }
+      conversation-driver{
+        template ("선수 순위표 알려줘")
+      }
+    }else-if (rankOutPut[0].EngLeagueName == 'mlb' || rankOutPut[0].EngLeagueName == 'npb' ){
+      conversation-driver{
+        template("투수 순위표 알려줘")
+      }
+      conversation-driver{
+        template("타자 순위표 알려줘")
+      }        
+    }else{
+      conversation-driver{
+        template ("선수 순위표 알려줘")
+      }
+    }
+  }
+}
+
+

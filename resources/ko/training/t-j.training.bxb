@@ -1,0 +1,20 @@
+train (t-j21lsx1lmlqu49wdc7pcikyqz) {
+  utterance ("[g:jaehoon.epl.getTeamNameDateTimeExpression] (이번 주)[v:time.DateTimeExpression] (리버풀)[v:jaehoon.epl.soccerTeamName:리버풀] 경기 알려줘")
+  plan (Y2Bh0MpKTM3Iz8/TSy3I0fNJTUwvTfUvLQkoLXFJLEkNycxNda0oKEotLs7Mz2PQRFabnloSkpqY65eYm4pFqRSy0uL85OTUIphqBumyzDK9EqB6PSwamRkYGZiAJAOQBkEIgIsCAA==)
+  last-modified (1591248411274)
+}
+train (t-jggvrp7i2b7wa00wjxz9els3q) {
+  utterance ("[g:jaehoon.epl.getLeagueNameDateTimeExpression] (내일)[v:viv.time.DateTimeExpression] (프리미어리그)[v:jaehoon.epl.leagueName:프리미어리그] 경기 알려줘")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWHQRhZLTy3xSU1ML031S8xNdUksSQ3JzE11rSgoSi0uzszPYxBDVpwDV8kgXZZZplcCVKuHRRMzAyMDE5BkANIgCAFwUQA=)
+  last-modified (1591245099485)
+}
+train (t-jqrpwgtvl3x5u7xip6r2am07v) {
+  utterance ("[g:jaehoon.epl.getLeagueRank] (18)[v:jaehoon.epl.seasonOneDepth:18] (19)[v:jaehoon.epl.seasonTwoDepth:19] 시즌 (분데스리가)[v:jaehoon.epl.leagueName:분데스리가] 순위표 알려줘")
+  plan (Y2BlEMtKTM3Iz8/TSy3I0StKzMv2Ly0JKC1hkEQWT08t8UlNTC9NDQIqQNWSAxb3S8xNZZBCFi9OTSzOz/PPS3VJLSjJwCYXUp4PkWNhYGRgYmAG0gxAFgTCAJIcAA==)
+  last-modified (1592286343982)
+}
+train (t-jzgoqi5vnh3fpmk2fv1qekaon) {
+  utterance ("[g:jaehoon.epl.getLeagueName] (13)[v:jaehoon.epl.fromDay:13]일 (분데스리가)[v:leagueName:분데스리가] 경기 보여줘")
+  plan (Y2BhEMpKTM3Iz8/TSy3I0csvLQkoLWGQRBZLTy3xSU1ML031S8xNZRBGlkorys91SaxkEEMWzEEoZmZgZGACkgxAGgQhAC4KAA==)
+  last-modified (1591195157642)
+}
